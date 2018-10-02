@@ -1,4 +1,4 @@
 node_modules/**/*
 .expo/**/*
 .DS_Store
-package-lock.json
+.idea
