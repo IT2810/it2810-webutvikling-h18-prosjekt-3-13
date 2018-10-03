@@ -1,15 +1,27 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { createBottomTabNavigator } from 'react-navigation';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default class App extends React.Component {
+import { HomeScreen, SettingsScreen, TodoScreen } from './screens/';
+
+// createStackNavigator() funksjonen returnerer et react-objekt, som skal brukes som root-component!
+
+const RootStack = createBottomTabNavigator({  // The different screens listed below
+  Home: { screen: HomeScreen },
+  Todo: { screen: TodoScreen },
+  Settings: { screen: SettingsScreen },
+},
+{
+  initialRouteName: 'Home'  // Defines starting screen (initial route)
+});
+
+export default class App extends React.Component{
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <RootStack />
     );
   }
-}
+};
 
 const styles = StyleSheet.create({
   container: {
