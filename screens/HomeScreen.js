@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 
 import { StyleSheet, Text, View, Button} from 'react-native';
+import styles from './styles.js';
 
 export default class HomeScreen extends Component{
 
@@ -10,9 +11,11 @@ export default class HomeScreen extends Component{
   };
 
   render(){
+    const {navigation, screenProps} = this.props;
     return(
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Home Screen</Text>
+      <View style={[styles.container, {backgroundColor: screenProps.bgColor}]}>
+        <Text style={{color: screenProps.color}}>Home Screen</Text>
+        <Text style={{color: screenProps.color}}>{screenProps.someText}</Text>
       </View>
     );
   }
