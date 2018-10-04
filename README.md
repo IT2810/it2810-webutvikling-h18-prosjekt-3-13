@@ -7,3 +7,5 @@ Kilder:
     - `npm install react-native-vector-icons --save`
     - `npm install react-native-sortable-listview --save`
 - React-native-navigation: https://reactnavigation.org/docs/en/tab-based-navigation.html
+  - Trenger følgende npm installasjon:
+    - 'npm install --save react-navigation'
