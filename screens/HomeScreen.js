@@ -1,36 +1,19 @@
 import React from "react";
 import { Component } from "react";
-import DailyGoal from "../components/DailyGoal";
 import DailyGoalForm from "../components/DailyGoalForm";
 import DailyGoalContainer from "../components/DailyGoalContainer";
 import saveData from "../utils/localstorage";
 import { loadData } from "../utils/localstorage";
 
-import { StyleSheet, Text, View, Button } from "react-native";
+import { Text, View } from "react-native";
 
 export default class HomeScreen extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      goals: [{ goalText: "Gå med hunden" }, { goalText: "Tisse på do" }]
-    };
   }
 
   static navigationOptions = {
     title: "Home"
-  };
-
-  addNewGoal = goalObject => {
-    let prevGoals = [...this.state.goals];
-    prevGoals.push(goalObject);
-
-    this.setState({ goals: prevGoals });
-    saveData("goals", prevGoals);
-  };
-
-  clearGoals = () => {
-    this.setState({ goals: [] });
   };
 
   componentDidMount() {
@@ -43,15 +26,20 @@ export default class HomeScreen extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: "center", marginTop: "10%" }}>
-        <Text>Home Screen</Text>
-        <DailyGoalForm
-          onNewGoal={this.addNewGoal}
-          clearAllGoals={this.clearGoals}
-          style={{ margin: 20 }}
-        />
-        <Text style={{ margin: 20 }}>Tidligere mål:</Text>
-        <DailyGoalContainer currentGoals={this.state.goals} />
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "10%"
+        }}
+      >
+        <View style={{ flex: 1 }}>
+          <Text>Hei og hopp, du er på Home Screen</Text>
+        </View>
+        <View style={{ flex: 1, justifyContent: "flex-start" }}>
+          <DailyGoalContainer />
+        </View>
       </View>
     );
   }
