@@ -5,7 +5,8 @@ import DailyGoalContainer from "../components/DailyGoalContainer";
 import saveData from "../utils/localstorage";
 import { loadData } from "../utils/localstorage";
 
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
+import styles from "./styles.js";
 
 export default class HomeScreen extends Component {
   constructor(props) {
@@ -16,30 +17,18 @@ export default class HomeScreen extends Component {
     title: "Home"
   };
 
-  componentDidMount() {
-    loadData("HomeScreenState").then(result => this.setState(result));
-  }
-
-  componentDidUpdate() {
-    saveData("HomeScreenState", this.state);
-  }
-
   render() {
+    const { navigation, screenProps } = this.props;
     return (
       <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: "10%"
-        }}
+        style={[
+          styles.container,
+          { backgroundColor: screenProps.bgColor, marginTop: "10%" }
+        ]}
       >
-        <View style={{ flex: 1 }}>
-          <Text>Hei og hopp, du er på Home Screen</Text>
-        </View>
-        <View style={{ flex: 1, justifyContent: "flex-start" }}>
-          <DailyGoalContainer />
-        </View>
+        <Text style={{ color: screenProps.color }}>Home Screen</Text>
+        <Text style={{ color: screenProps.color }}>{screenProps.someText}</Text>
+        <DailyGoalContainer />
       </View>
     );
   }
