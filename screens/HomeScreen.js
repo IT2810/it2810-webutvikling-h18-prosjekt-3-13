@@ -1,21 +1,34 @@
-import React from 'react';
-import { Component } from 'react';
+import React from "react";
+import { Component } from "react";
+import DailyGoalForm from "../components/DailyGoalForm";
+import DailyGoalContainer from "../components/DailyGoalContainer";
+import saveData from "../utils/localstorage";
+import { loadData } from "../utils/localstorage";
 
-import { StyleSheet, Text, View, Button} from 'react-native';
-import styles from './styles.js';
+import { StyleSheet, Text, View, Button } from "react-native";
+import styles from "./styles.js";
 
-export default class HomeScreen extends Component{
+export default class HomeScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
 
   static navigationOptions = {
     title: "Home"
   };
 
-  render(){
-    const {navigation, screenProps} = this.props;
-    return(
-      <View style={[styles.container, {backgroundColor: screenProps.bgColor}]}>
-        <Text style={{color: screenProps.color}}>Home Screen</Text>
-        <Text style={{color: screenProps.color}}>{screenProps.someText}</Text>
+  render() {
+    const { navigation, screenProps } = this.props;
+    return (
+      <View
+        style={[
+          styles.container,
+          { backgroundColor: screenProps.bgColor, marginTop: "10%" }
+        ]}
+      >
+        <Text style={{ color: screenProps.color }}>Home Screen</Text>
+        <Text style={{ color: screenProps.color }}>{screenProps.someText}</Text>
+        <DailyGoalContainer />
       </View>
     );
   }

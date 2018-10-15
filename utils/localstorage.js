@@ -1,28 +1,21 @@
 import { AsyncStorage } from "react-native";
 
-export const saveData = (key, data) => {
-  if (typeof key !== "string") {
-    return false;
+export default function saveData(key, data) {
+  try {
+    AsyncStorage.setItem(key, JSON.stringify(data));
+    return true;
+  } catch (error) {
+    alert("Error occured while saving");
   }
-  if (!data) {
-    return false;
-  }
-
-  AsyncStorage.setItem(key, JSON.stringify(data));
-  return true;
-};
+}
 
 export const loadData = async key => {
+  let parsedItem;
   try {
-    if (typeof key !== "string") {
-      return false;
-    }
-
     let item = await AsyncStorage.getItem(key);
-    let parsedItem = JSON.parse(item);
-    return parsedItem;
+    parsedItem = JSON.parse(item);
   } catch (error) {
-    console.log(error);
     return false;
   }
+  return parsedItem;
 };
