@@ -46,7 +46,7 @@ export default class App extends React.Component{
   }
 
   render() {
-    console.log(this.state.theme);
+    //console.log(this.state.theme);
     const screenProps ={
       someText: "some text",
       handleThemeChange: this.handleThemeChange,

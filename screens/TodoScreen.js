@@ -3,6 +3,7 @@ import { Component } from 'react';
 
 import { StyleSheet, Text, View } from 'react-native';
 import styles from './styles.js';
+import ListView from "../components/todo/TodoApp";
 
 export default class TodoScreen extends Component{
 
@@ -13,8 +14,8 @@ export default class TodoScreen extends Component{
   render(){
     const {screenProps} = this.props;
     return(
-      <View style={[styles.container, {backgroundColor: screenProps.bgColor}]}>
-        <Text style={{color: screenProps.color}}>Todo Screen</Text>
+      <View style={[styles.containerTodo, {backgroundColor: screenProps.bgColor}]}>
+          <ListView/>
       </View>
     );
   }
