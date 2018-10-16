@@ -5,6 +5,8 @@ import saveData from "../utils/localstorage";
 import { loadData } from "../utils/localstorage";
 import DailyGoalForm from "./DailyGoalForm";
 
+const init = { goals: [], mainGoal: "" };
+
 class DailyGoalContainer extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +35,9 @@ class DailyGoalContainer extends Component {
   };
 
   clearGoals = () => {
-    this.setState({ goals: [], mainGoal: "" });
+    if (this.state !== init) {
+      this.setState(init);
+    }
   };
 
   getPlaceholderGoal = () => {
