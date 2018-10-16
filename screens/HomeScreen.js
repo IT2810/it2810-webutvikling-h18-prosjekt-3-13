@@ -4,6 +4,7 @@ import DailyGoalForm from "../components/DailyGoalForm";
 import DailyGoalContainer from "../components/DailyGoalContainer";
 import saveData from "../utils/localstorage";
 import { loadData } from "../utils/localstorage";
+import PedometerSensor from "../components/Pedometer.js";
 
 import { StyleSheet, Text, View, Button } from "react-native";
 import styles from "./styles.js";
@@ -29,6 +30,7 @@ export default class HomeScreen extends Component {
         <Text style={{ color: screenProps.color }}>Home Screen</Text>
         <Text style={{ color: screenProps.color }}>{screenProps.someText}</Text>
         <DailyGoalContainer />
+        <PedometerSensor />
       </View>
     );
   }
