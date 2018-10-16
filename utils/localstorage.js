@@ -3,9 +3,10 @@ import { AsyncStorage } from "react-native";
 export default function saveData(key, data) {
   try {
     AsyncStorage.setItem(key, JSON.stringify(data));
-    return true;
+    console.log("SUCCESS: saved data on key " + key);
   } catch (error) {
-    alert("Error occured while saving");
+    console.log("Error occured while saving on " + key);
+    console.log(error);
   }
 }
 
@@ -15,7 +16,8 @@ export const loadData = async key => {
     let item = await AsyncStorage.getItem(key);
     parsedItem = JSON.parse(item);
   } catch (error) {
-    return false;
+    console.log("Error occured while loading from " + key);
+    console.log(error);
   }
   return parsedItem;
 };
