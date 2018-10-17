@@ -4,6 +4,7 @@ import { View, Text } from "react-native";
 import saveData from "../utils/localstorage";
 import { loadData } from "../utils/localstorage";
 import DailyGoalForm from "./DailyGoalForm";
+import { styles } from "../screens/styles.js";
 
 class DailyGoalContainer extends Component {
   constructor(props) {
@@ -39,16 +40,16 @@ class DailyGoalContainer extends Component {
   getPlaceholderGoal = () => {
     if (this.state.mainGoal === "") {
       return (
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+        <Text style={styles(this.props.screenProps).textCurrentGoal}>
           What's your goal?
         </Text>
       );
     } else {
       return (
         <View style={{ alignItems: "center" }}>
-          <Text style={{ fontSize: 10 }}>Current goal:</Text>
+          <Text style={styles(this.props.screenProps).textGoal}>Current goal:</Text>
           <Text
-            style={{ fontSize: 20, fontWeight: "bold", textAlign: "center" }}
+            style={styles(this.props.screenProps).textCurrentGoal}
           >
             {this.state.mainGoal}
           </Text>
@@ -74,6 +75,7 @@ class DailyGoalContainer extends Component {
             onNewGoal={this.addNewGoal}
             clearAllGoals={this.clearGoals}
             style={{ margin: 20 }}
+            screenProps={this.props.screenProps}
           />
         </View>
       </View>

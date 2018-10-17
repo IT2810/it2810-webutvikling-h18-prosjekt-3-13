@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 
 import { StyleSheet, Text, View } from 'react-native';
-import styles from './styles.js';
+import { styles } from './styles.js';
 
 export default class TodoScreen extends Component{
 
@@ -13,8 +13,8 @@ export default class TodoScreen extends Component{
   render(){
     const {screenProps} = this.props;
     return(
-      <View style={[styles.container, {backgroundColor: screenProps.bgColor}]}>
-        <Text style={{color: screenProps.color}}>Todo Screen</Text>
+      <View style={styles(this.props.screenProps).container}>
+        <Text style={styles(this.props.screenProps).text}>Todo Screen</Text>
       </View>
     );
   }

@@ -6,7 +6,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { AppRegistry, TextInput } from 'react-native';
 import saveData from "../utils/localstorage.js";
 import { loadData } from "../utils/localstorage.js";
-import styles from '../screens/styles.js';
+import { styles } from '../screens/styles.js';
 
 
 export default class PedometerSensor extends React.Component {
@@ -119,17 +119,17 @@ export default class PedometerSensor extends React.Component {
     const rightText = this.getProgressPercent("right");
     return (
       <View>
-        <Text style={{color: textStyle}}>
+        <Text style={styles(this.props.screenProps).text}>
           Pedometer.isAvailableAsync(): {this.state.isPedometerAvailable}
         </Text>
-        <Text style={{color: textStyle}}>
+        <Text style={styles(this.props.screenProps).text}>
           Steps taken in the last 24 hours: {this.state.pastStepCount}
         </Text>
-        <Text style={{color: textStyle}}>
+        <Text style={styles(this.props.screenProps).text}>
           {textStyle}
         </Text>
-        <Text style={{color: textStyle}}>Walk! And watch this go up: {this.state.currentStepCount}</Text>
-        <Text>Current daily stepgoal: {this.state.stepGoal}</Text>
+        <Text style={styles(this.props.screenProps).text}>Walk! And watch this go up: {this.state.currentStepCount}</Text>
+        <Text style={styles(this.props.screenProps).text}>Current daily stepgoal: {this.state.stepGoal}</Text>
         <View
           style={{
             flexDirection: 'row',
@@ -143,8 +143,9 @@ export default class PedometerSensor extends React.Component {
           </View>
         </View>
         <TextInput
+          placeholderTextColor={this.props.screenProps.color}
           placeholder={"Type your new stepcount goal here"}
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40, borderColor: 'gray', borderWidth: 1, color: this.props.screenProps.color}}
           onChangeText={(text) => this.setState({text})}
           value={this.state.text}
           onChangeText={text => this.setState({ inputText: text })}

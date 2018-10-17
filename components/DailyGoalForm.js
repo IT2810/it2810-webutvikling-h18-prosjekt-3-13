@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Text, View } from "react-native";
 import { Input, Button } from "react-native-elements";
 
+import { styles } from "../screens/styles.js";
+
 class DailyGoalForm extends Component {
   constructor(props) {
     super(props);
@@ -32,6 +34,8 @@ class DailyGoalForm extends Component {
       >
         <View style={{ width: 300, margin: 20 }}>
           <Input
+            placeholderTextColor={this.props.screenProps.color}
+
             ref={input => {
               this.mainInput = input;
             }}
@@ -39,7 +43,10 @@ class DailyGoalForm extends Component {
             inputContainerStyle={{
               width: "100%",
               margin: 10,
-              alignSelf: "stretch"
+              alignSelf: "stretch",
+            }}
+            inputStyle={{
+              color: this.props.screenProps.color
             }}
             onChangeText={text => this.setState({ inputText: text })}
           />
