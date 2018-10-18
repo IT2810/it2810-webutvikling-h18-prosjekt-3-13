@@ -1,21 +1,39 @@
-import React from 'react';
-import { Component } from 'react';
+import React from "react";
+import { Component } from "react";
+import DailyGoalForm from "../components/DailyGoalForm";
+import DailyGoalContainer from "../components/DailyGoalContainer";
+import saveData from "../utils/localstorage";
+import { loadData } from "../utils/localstorage";
+import PedometerSensor from "../components/Pedometer.js";
 
-import { StyleSheet, Text, View, Button} from 'react-native';
-import styles from './styles.js';
+import { StyleSheet, Text, View, Button } from "react-native";
+import { styles } from "./styles.js";
 
-export default class HomeScreen extends Component{
+export default class HomeScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
 
   static navigationOptions = {
     title: "Home"
   };
 
-  render(){
-    const {navigation, screenProps} = this.props;
-    return(
-      <View style={[styles.container, {backgroundColor: screenProps.bgColor}]}>
-        <Text style={{color: screenProps.color}}>Home Screen</Text>
-        <Text style={{color: screenProps.color}}>{screenProps.someText}</Text>
+  render() {
+    console.log(this.props.screenProps);
+    const { navigation, screenProps } = this.props;
+    return (
+      <View style={styles(this.props.screenProps).container}>
+        <View style={styles(this.props.screenProps).topBox}></View>
+        <View
+          style={[
+            styles(this.props.screenProps).container,
+          ]}
+        >
+          <Text style={styles(this.props.screenProps).text}>Home Screen</Text>
+          <Text style={styles(this.props.screenProps).text}>{screenProps.someText}</Text>
+          <DailyGoalContainer screenProps={this.props.screenProps}/>
+          <PedometerSensor screenProps={this.props.screenProps}/>
+        </View>
       </View>
     );
   }
