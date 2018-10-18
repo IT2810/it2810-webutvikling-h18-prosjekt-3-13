@@ -6,6 +6,8 @@ import TodoModel from './TodoModel';
 import PartList from './PartList';
 import InputBox from './InputBox';
 
+import { styles } from '../../screens/styles.js';
+
 class TodoApp extends React.Component {
     constructor(props) {
         super(props);
@@ -55,6 +57,7 @@ class TodoApp extends React.Component {
     };
 
     render() {
+      console.log("UUUUUU:", this.props.screenProps)
         const completed = this.state.dataList.filter(task => task.completed);
         const notCompleted = this.state.dataList.filter(task => !task.completed);
 
@@ -62,23 +65,16 @@ class TodoApp extends React.Component {
             if (this.state.dataList.length) {
                 return (
                     <View
-                        style={{
-                            flex: 7
-                        }}>
-                        <PartList list={notCompleted} handleDelete={this.handleDelete}
+                        style={styles(this.props.screenProps).toDoLists1}>
+                        <PartList screenProps={this.props.screenProps} list={notCompleted} handleDelete={this.handleDelete}
                                   handleChange={this.handleChange}/>
-                        <PartList list={completed} handleDelete={this.handleDelete} handleChange={this.handleChange}/>
+                                <PartList screenProps={this.props.screenProps} list={completed} handleDelete={this.handleDelete} handleChange={this.handleChange}/>
                     </View>
                 )
             } else {
                 return(
                     <View
-                        style={{
-                            flex: 1,
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'center'
-                        }}>
+                        style={styles(this.props.screenProps).toDoLists2}>
                         <Text
                             style={{fontSize: 50, color: 'lightgrey', textAlign: "center"}}>
                             All todo's completed
@@ -89,12 +85,8 @@ class TodoApp extends React.Component {
         }
         return (
             <View
-                style={{
-                flex: 1,
-                flexDirection: 'column',
-                paddingTop: 70
-            }}>
-                <InputBox
+                style={styles(this.props.screenProps).toDoLists3}>
+                <InputBox screenProps = {this.props.screenProps}
                     style={{
                     flex: 1
                 }}

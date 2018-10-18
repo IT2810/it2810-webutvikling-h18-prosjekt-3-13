@@ -18,9 +18,9 @@ class PartList extends React.Component{
 
     render() {
         return (
-            <View>
+            <View style={{backgroundColor: "blue"}}>
             {this.props.list.map(item =>
-                <ListObject key={item.createdAt} data={item} handleDelete={this.onDeletePress} handleChange={this.onCompletePress
+                <ListObject screenProps={this.props.screenProps} key={item.createdAt} data={item} handleDelete={this.onDeletePress} handleChange={this.onCompletePress
                 }/>
                 )
             }

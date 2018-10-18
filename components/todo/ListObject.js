@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import { ListItem, Icon} from 'react-native-elements';
+import { styles } from '../../screens/styles.js';
 
 class ListObject extends React.Component{
     constructor(props) {
@@ -24,8 +25,8 @@ class ListObject extends React.Component{
                 <ListItem
                         key={this.props.data.createdAt}
                         title={
-                            <View style={{paddingLeft: "2%"}}>
-                                <Text style={this.props.data.completed ? {textDecorationLine: 'line-through', textDecorationStyle: 'solid', color: 'lightgrey'} : {}}>{this.props.data.task}</Text>
+                            <View style={{paddingLeft: "2%", backgroundColor: this.props.screenProps.bg}}>
+                                <Text style={this.props.data.completed ? {textDecorationLine: 'line-through', textDecorationStyle: 'solid', color: this.props.screenProps.color} : {color: this.props.screenProps.color}}>{this.props.data.task}</Text>
                             </View>}
                         rightIcon={
                                 <Icon

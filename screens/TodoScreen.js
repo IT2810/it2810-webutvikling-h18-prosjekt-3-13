@@ -16,7 +16,7 @@ export default class TodoScreen extends Component{
     const {screenProps} = this.props;
     return(
       <View style={styles(this.props.screenProps).containerTodo}>
-          <ListView/>
+          <ListView screenProps={this.props.screenProps}/>
       </View>
     );
   }

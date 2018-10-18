@@ -2,6 +2,8 @@ import React from 'react';
 import {TextInput, View} from 'react-native';
 import {Icon} from "react-native-elements";
 
+import { styles } from "../../screens/styles.js";
+
 class InputBox extends React.Component {
     constructor(props) {
         super(props);
@@ -31,10 +33,12 @@ class InputBox extends React.Component {
     };
 
     render() {
+        console.log("LEEES", this.props);
         return (
-            <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}
+            <View style={styles(this.props.screenProps).inPutBoxTodo}
                 >
-                <TextInput style={{flex: 1, height: 36, fontSize: 16, margin: 8, paddingLeft: 10,  borderWidth: 1, borderColor: '#eee', borderRadius: 8, backgroundColor: '#fff'}}
+                <TextInput style={styles(this.props.screenProps).inPutBoxTodoText}
+                           placeholderTextColor={this.props.screenProps.color}
                            placeholder='Add a task'
                            blurOnSubmit={false}
                            value={this.state.newValue}
