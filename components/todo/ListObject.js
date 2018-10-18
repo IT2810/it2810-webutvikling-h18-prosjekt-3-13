@@ -8,20 +8,15 @@ class ListObject extends React.Component{
         super(props);
     }
 
-    onCompletePress = () => {
+    onCompletePress = () => { // Function for passing completion-event to TodoApp
         this.props.handleChange(this.props.data);
     };
 
-    onDeletePress = () => {
+    onDeletePress = () => { // Function for passing deletion-event to TodoApp
         this.props.handleDelete(this.props.data);
     };
 
-    test = () => {
-        alert("listItem")
-    };
-
     render() {
-        console.log("Screenprops: " + this.props.screenProps.bg.toString());
         return (
                 <ListItem
                     containerStyle={{ backgroundColor: this.props.screenProps.bg }}

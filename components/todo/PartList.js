@@ -8,11 +8,11 @@ class PartList extends React.Component{
         super(props);
     }
 
-    onCompletePress = (task) => {
+    onCompletePress = (task) => { // Passtrough-function for completion to ToDoApp
         this.props.handleChange(task);
     };
 
-    onDeletePress = (task) => {
+    onDeletePress = (task) => { // Passtrough-function for deletion to ToDoApp
         this.props.handleDelete(task);
     };
 
