@@ -45,24 +45,9 @@ export default class App extends React.Component {
   }
   componentDidMount(){
     loadData("theme").then(result => this.handleThemeChange(result));
-    this.setState({initialRouteName: "Home"})
   }
 
   render() {
-    const RootStack = createBottomTabNavigator(
-      {
-        // The different screens listed below
-        Home: { screen: HomeScreen },
-        Todo: { screen: TodoScreen },
-        Settings: { screen: SettingsScreen }
-      },
-      {
-        initialRouteName: this.state.initialRouteName, // Defines starting screen (initial route)
-        tabBarOptions: {
-          style: {backgroundColor: this.state.bgColor}
-        }
-      },
-    );
     console.log(this.state.bgColor);
     console.log(this.state.theme);
     const screenProps = {
@@ -74,3 +59,18 @@ export default class App extends React.Component {
     return <RootStack screenProps={screenProps} />;
   }
 }
+
+export const RootStack = createBottomTabNavigator(
+  {
+    // The different screens listed below
+    Home: { screen: HomeScreen },
+    Todo: { screen: TodoScreen },
+    Settings: { screen: SettingsScreen }
+  },
+  {
+    initialRouteName: "Home", // Defines starting screen (initial route)
+    tabBarOptions: {
+      style: {backgroundColor: "#3d3d3d"}
+    }
+  },
+);
