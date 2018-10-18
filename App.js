@@ -30,11 +30,13 @@ export default class App extends React.Component {
     if (value == "nightmode") {
       this.setState({
         bgColor: "#1d1d1d",
+        bgColorSecondary: "#7c7c7c",
         color: "white"
       });
     } else if (value == "defaultmode") {
       this.setState({
         bgColor: "white",
+        bgColorSecondary: "#7c7c7c",
         color: "black"
       });
     }
@@ -55,6 +57,7 @@ export default class App extends React.Component {
       someText: "some text",
       handleThemeChange: this.handleThemeChange,
       bg: this.state.bgColor,
+      bgSec: this.state.bgColorSecondary,
       color: this.state.color
     };
     return <RootStack screenProps={screenProps} />;

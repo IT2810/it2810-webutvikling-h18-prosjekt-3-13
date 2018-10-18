@@ -7,6 +7,8 @@ import PartList from './PartList';
 import InputBox from './InputBox';
 
 import { styles } from '../../screens/styles.js';
+import {loadData} from "../../utils/localstorage";
+import saveData from "../../utils/localstorage";
 
 class TodoApp extends React.Component {
     constructor(props) {
@@ -14,6 +16,14 @@ class TodoApp extends React.Component {
         this.state = {
             dataList: []
         }
+    }
+
+    componentDidMount() {
+        loadData("TodoAppState").then(result => this.setState(result));
+    }
+
+    componentDidUpdate() {
+        saveData("TodoAppState", this.state);
     }
 
     addTodoItem = (task) => {
@@ -57,7 +67,6 @@ class TodoApp extends React.Component {
     };
 
     render() {
-      console.log("UUUUUU:", this.props.screenProps)
         const completed = this.state.dataList.filter(task => task.completed);
         const notCompleted = this.state.dataList.filter(task => !task.completed);
 
@@ -68,7 +77,13 @@ class TodoApp extends React.Component {
                         style={styles(this.props.screenProps).toDoLists1}>
                         <PartList screenProps={this.props.screenProps} list={notCompleted} handleDelete={this.handleDelete}
                                   handleChange={this.handleChange}/>
-                                <PartList screenProps={this.props.screenProps} list={completed} handleDelete={this.handleDelete} handleChange={this.handleChange}/>
+                        <View
+                            style={(completed.length && notCompleted.length) ? {
+                                borderBottomColor: this.props.screenProps.bgSec,
+                                borderBottomWidth: 2, marginTop: 20, marginBottom: 20, marginLeft: 150, marginRight: 150} : {}
+                            }
+                        />
+                        <PartList screenProps={this.props.screenProps} list={completed} handleDelete={this.handleDelete} handleChange={this.handleChange}/>
                     </View>
                 )
             } else {
@@ -88,7 +103,8 @@ class TodoApp extends React.Component {
                 style={styles(this.props.screenProps).toDoLists3}>
                 <InputBox screenProps = {this.props.screenProps}
                     style={{
-                    flex: 1
+                    flex: 1,
+                    marginBottom: 20,
                 }}
                     onAdd={this.handleAdd}/>
                 {renderLists()}

@@ -21,12 +21,14 @@ class ListObject extends React.Component{
     };
 
     render() {
+        console.log("Screenprops: " + this.props.screenProps.bg.toString());
         return (
                 <ListItem
+                    containerStyle={{ backgroundColor: this.props.screenProps.bg }}
                         key={this.props.data.createdAt}
                         title={
                             <View style={{paddingLeft: "2%", backgroundColor: this.props.screenProps.bg}}>
-                                <Text style={this.props.data.completed ? {textDecorationLine: 'line-through', textDecorationStyle: 'solid', color: this.props.screenProps.color} : {color: this.props.screenProps.color}}>{this.props.data.task}</Text>
+                                <Text style={this.props.data.completed ? {textDecorationLine: 'line-through', textDecorationStyle: 'solid', color: "lightgrey"} : {color: this.props.screenProps.color}}>{this.props.data.task}</Text>
                             </View>}
                         rightIcon={
                                 <Icon

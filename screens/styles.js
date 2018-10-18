@@ -57,7 +57,7 @@ export const styles = (props) => StyleSheet.create({
     toDoLists3: {
       flex: 1,
       flexDirection: 'column',
-      paddingTop: 70,
+      paddingTop: 40,
       backgroundColor: props.bg,
     },
     inPutBoxTodo: {
