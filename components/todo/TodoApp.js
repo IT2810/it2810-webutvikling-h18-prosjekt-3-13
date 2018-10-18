@@ -61,14 +61,14 @@ class TodoApp extends React.Component {
         renderLists = () => {
             if (this.state.dataList.length) {
                 return (
-                    <List
+                    <View
                         style={{
                             flex: 7
                         }}>
                         <PartList list={notCompleted} handleDelete={this.handleDelete}
                                   handleChange={this.handleChange}/>
                         <PartList list={completed} handleDelete={this.handleDelete} handleChange={this.handleChange}/>
-                    </List>
+                    </View>
                 )
             } else {
                 return(
