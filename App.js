@@ -71,7 +71,9 @@ export const RootStack = createBottomTabNavigator(
   {
     initialRouteName: "Home", // Defines starting screen (initial route)
     tabBarOptions: {
-      style: {backgroundColor: "#3d3d3d"}
+      style: {backgroundColor: "#3d3d3d",
+              paddingBottom: 20,
+              height: "10%"}
     }
   },
 );
