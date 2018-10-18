@@ -4,7 +4,7 @@ import primaryColor from '../App.js';
 export const styles = (props) => StyleSheet.create({
     topBox:{
         height: "5%",
-        backgroundColor: props.bg,
+        backgroundColor: props.bgSec,
     },
     container: {
         flex: 1,
@@ -16,11 +16,11 @@ export const styles = (props) => StyleSheet.create({
         color: props.color,
     },
     textGoal:{
-        fontSize: 10,
+        fontSize: 15,
         color: props.color,
     },
     textCurrentGoal:{
-        fontSize: 20,
+        fontSize: 30,
         fontWeight: "bold",
         textAlign: "center",
         color: props.color,
@@ -78,4 +78,9 @@ export const styles = (props) => StyleSheet.create({
       backgroundColor: props.bg,
       color: props.color,
     },
+    progressCircleText: {
+        fontSize: 18,
+        color: "white",
+        textAlign: "center",
+    }
 });

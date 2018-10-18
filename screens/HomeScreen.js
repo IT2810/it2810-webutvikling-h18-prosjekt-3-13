@@ -19,7 +19,6 @@ export default class HomeScreen extends Component {
   };
 
   render() {
-    console.log(this.props.screenProps);
     const { navigation, screenProps } = this.props;
     return (
       <View style={styles(this.props.screenProps).container}>
@@ -29,10 +28,8 @@ export default class HomeScreen extends Component {
             styles(this.props.screenProps).container,
           ]}
         >
-          <Text style={styles(this.props.screenProps).text}>Home Screen</Text>
-          <Text style={styles(this.props.screenProps).text}>{screenProps.someText}</Text>
+            <PedometerSensor screenProps={this.props.screenProps}/>
           <DailyGoalContainer screenProps={this.props.screenProps}/>
-          <PedometerSensor screenProps={this.props.screenProps}/>
         </View>
       </View>
     );
