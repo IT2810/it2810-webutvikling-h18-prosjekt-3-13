@@ -4,9 +4,10 @@ import DailyGoalForm from "../components/DailyGoalForm";
 import DailyGoalContainer from "../components/DailyGoalContainer";
 import saveData from "../utils/localstorage";
 import { loadData } from "../utils/localstorage";
+import PedometerSensor from "../components/Pedometer.js";
 
 import { StyleSheet, Text, View, Button } from "react-native";
-import styles from "./styles.js";
+import { styles } from "./styles.js";
 
 export default class HomeScreen extends Component {
   constructor(props) {
@@ -18,17 +19,21 @@ export default class HomeScreen extends Component {
   };
 
   render() {
+    console.log(this.props.screenProps);
     const { navigation, screenProps } = this.props;
     return (
-      <View
-        style={[
-          styles.container,
-          { backgroundColor: screenProps.bgColor, marginTop: "10%" }
-        ]}
-      >
-        <Text style={{ color: screenProps.color }}>Home Screen</Text>
-        <Text style={{ color: screenProps.color }}>{screenProps.someText}</Text>
-        <DailyGoalContainer />
+      <View style={styles(this.props.screenProps).container}>
+        <View style={styles(this.props.screenProps).topBox}></View>
+        <View
+          style={[
+            styles(this.props.screenProps).container,
+          ]}
+        >
+          <Text style={styles(this.props.screenProps).text}>Home Screen</Text>
+          <Text style={styles(this.props.screenProps).text}>{screenProps.someText}</Text>
+          <DailyGoalContainer screenProps={this.props.screenProps}/>
+          <PedometerSensor screenProps={this.props.screenProps}/>
+        </View>
       </View>
     );
   }
