@@ -1,0 +1,2398 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "overflow": "hidden",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      pointerEvents="auto"
+      removeClippedSubviews={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "opacity": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "white",
+                "height": "5%",
+              }
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "white",
+                  "flex": 1,
+                  "justifyContent": "center",
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
+            >
+              Home Screen
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
+            >
+              some text
+            </Text>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "black",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  What's your goal?
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "column",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "margin": 20,
+                        "width": 300,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "width": "90%",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "alignSelf": "stretch",
+                            "borderBottomWidth": 1,
+                            "borderColor": "#86939e",
+                            "flexDirection": "row",
+                            "margin": 10,
+                            "transform": Array [
+                              Object {
+                                "translateX": 0,
+                              },
+                            ],
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <TextInput
+                          allowFontScaling={true}
+                          onChangeText={[Function]}
+                          placeholder="Type here"
+                          placeholderTextColor="black"
+                          style={
+                            Object {
+                              "alignSelf": "center",
+                              "color": "black",
+                              "flex": 1,
+                              "fontSize": 18,
+                              "height": 40,
+                              "marginLeft": 10,
+                            }
+                          }
+                          underlineColorAndroid="transparent"
+                        />
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "stretch",
+                        "flex": 1,
+                        "flexDirection": "column",
+                        "justifyContent": "flex-start",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          false,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        isTVSelectable={true}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "orange",
+                              "borderRadius": 3,
+                              "flexDirection": "row",
+                              "justifyContent": "center",
+                              "width": 300,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "backgroundColor": "transparent",
+                                "color": "white",
+                                "fontSize": 18,
+                                "padding": 8,
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            Set as your goal
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          false,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        isTVSelectable={true}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "skyblue",
+                              "borderRadius": 3,
+                              "flexDirection": "row",
+                              "justifyContent": "center",
+                              "width": 300,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "backgroundColor": "transparent",
+                                "color": "white",
+                                "fontSize": 18,
+                                "padding": 8,
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            Clear goal
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Pedometer.isAvailableAsync(): 
+                checking
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Steps taken in the last 24 hours: 
+                0
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              />
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Walk! And watch this go up: 
+                0
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Current daily stepgoal: 
+                10000
+              </Text>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "height": 100,
+                    "justifyContent": "center",
+                    "padding": 20,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#a30000",
+                      "flex": 0,
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "lightgrey",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
+                  >
+                    0%
+                  </Text>
+                </View>
+              </View>
+              <TextInput
+                allowFontScaling={true}
+                onChangeText={[Function]}
+                placeholder="Type your new stepcount goal here"
+                placeholderTextColor="black"
+                style={
+                  Object {
+                    "borderColor": "gray",
+                    "borderWidth": 1,
+                    "color": "black",
+                    "height": 40,
+                  }
+                }
+              />
+              <View
+                style={
+                  Array [
+                    undefined,
+                    false,
+                  ]
+                }
+              >
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "orange",
+                        "borderRadius": 3,
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                        "width": 300,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "white",
+                          "fontSize": 18,
+                          "padding": 8,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Set as your goal
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "backgroundColor": "#3d3d3d",
+        "borderTopColor": "rgba(0, 0, 0, .3)",
+        "borderTopWidth": 0.5,
+        "flexDirection": "row",
+        "height": "10%",
+        "paddingBottom": 20,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="Home"
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          },
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 29,
+            },
+            false,
+            Object {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 1,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 0,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#3478f6",
+            "fontSize": 11,
+            "marginBottom": 1.5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Home
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Todo"
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          },
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 29,
+            },
+            false,
+            Object {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 0,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 1,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#929292",
+            "fontSize": 11,
+            "marginBottom": 1.5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Todo
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Settings"
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          },
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 29,
+            },
+            false,
+            Object {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 0,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 1,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#929292",
+            "fontSize": 11,
+            "marginBottom": 1.5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Settings
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders settings correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "overflow": "hidden",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      pointerEvents="auto"
+      removeClippedSubviews={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "opacity": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "white",
+                "height": "5%",
+              }
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "white",
+                  "flex": 1,
+                  "justifyContent": "center",
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
+            >
+              Home Screen
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
+            >
+              some text
+            </Text>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "black",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  What's your goal?
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "column",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "margin": 20,
+                        "width": 300,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "width": "90%",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "alignSelf": "stretch",
+                            "borderBottomWidth": 1,
+                            "borderColor": "#86939e",
+                            "flexDirection": "row",
+                            "margin": 10,
+                            "transform": Array [
+                              Object {
+                                "translateX": 0,
+                              },
+                            ],
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <TextInput
+                          allowFontScaling={true}
+                          onChangeText={[Function]}
+                          placeholder="Type here"
+                          placeholderTextColor="black"
+                          style={
+                            Object {
+                              "alignSelf": "center",
+                              "color": "black",
+                              "flex": 1,
+                              "fontSize": 18,
+                              "height": 40,
+                              "marginLeft": 10,
+                            }
+                          }
+                          underlineColorAndroid="transparent"
+                        />
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "stretch",
+                        "flex": 1,
+                        "flexDirection": "column",
+                        "justifyContent": "flex-start",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          false,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        isTVSelectable={true}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "orange",
+                              "borderRadius": 3,
+                              "flexDirection": "row",
+                              "justifyContent": "center",
+                              "width": 300,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "backgroundColor": "transparent",
+                                "color": "white",
+                                "fontSize": 18,
+                                "padding": 8,
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            Set as your goal
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          false,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        isTVSelectable={true}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "skyblue",
+                              "borderRadius": 3,
+                              "flexDirection": "row",
+                              "justifyContent": "center",
+                              "width": 300,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "backgroundColor": "transparent",
+                                "color": "white",
+                                "fontSize": 18,
+                                "padding": 8,
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            Clear goal
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Pedometer.isAvailableAsync(): 
+                checking
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Steps taken in the last 24 hours: 
+                0
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              />
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Walk! And watch this go up: 
+                0
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Current daily stepgoal: 
+                10000
+              </Text>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "height": 100,
+                    "justifyContent": "center",
+                    "padding": 20,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#a30000",
+                      "flex": 0,
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "lightgrey",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
+                  >
+                    0%
+                  </Text>
+                </View>
+              </View>
+              <TextInput
+                allowFontScaling={true}
+                onChangeText={[Function]}
+                placeholder="Type your new stepcount goal here"
+                placeholderTextColor="black"
+                style={
+                  Object {
+                    "borderColor": "gray",
+                    "borderWidth": 1,
+                    "color": "black",
+                    "height": 40,
+                  }
+                }
+              />
+              <View
+                style={
+                  Array [
+                    undefined,
+                    false,
+                  ]
+                }
+              >
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "orange",
+                        "borderRadius": 3,
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                        "width": 300,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "white",
+                          "fontSize": 18,
+                          "padding": 8,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Set as your goal
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "backgroundColor": "#3d3d3d",
+        "borderTopColor": "rgba(0, 0, 0, .3)",
+        "borderTopWidth": 0.5,
+        "flexDirection": "row",
+        "height": "10%",
+        "paddingBottom": 20,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="Home"
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          },
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 29,
+            },
+            false,
+            Object {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 1,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 0,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#3478f6",
+            "fontSize": 11,
+            "marginBottom": 1.5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Home
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Todo"
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          },
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 29,
+            },
+            false,
+            Object {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 0,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 1,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#929292",
+            "fontSize": 11,
+            "marginBottom": 1.5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Todo
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Settings"
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          },
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 29,
+            },
+            false,
+            Object {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 0,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 1,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#929292",
+            "fontSize": 11,
+            "marginBottom": 1.5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Settings
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders todoscreen correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "overflow": "hidden",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      pointerEvents="auto"
+      removeClippedSubviews={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "opacity": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "white",
+                "height": "5%",
+              }
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "white",
+                  "flex": 1,
+                  "justifyContent": "center",
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
+            >
+              Home Screen
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
+            >
+              some text
+            </Text>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "black",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  What's your goal?
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "column",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "margin": 20,
+                        "width": 300,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "width": "90%",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "alignSelf": "stretch",
+                            "borderBottomWidth": 1,
+                            "borderColor": "#86939e",
+                            "flexDirection": "row",
+                            "margin": 10,
+                            "transform": Array [
+                              Object {
+                                "translateX": 0,
+                              },
+                            ],
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <TextInput
+                          allowFontScaling={true}
+                          onChangeText={[Function]}
+                          placeholder="Type here"
+                          placeholderTextColor="black"
+                          style={
+                            Object {
+                              "alignSelf": "center",
+                              "color": "black",
+                              "flex": 1,
+                              "fontSize": 18,
+                              "height": 40,
+                              "marginLeft": 10,
+                            }
+                          }
+                          underlineColorAndroid="transparent"
+                        />
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "stretch",
+                        "flex": 1,
+                        "flexDirection": "column",
+                        "justifyContent": "flex-start",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          false,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        isTVSelectable={true}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "orange",
+                              "borderRadius": 3,
+                              "flexDirection": "row",
+                              "justifyContent": "center",
+                              "width": 300,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "backgroundColor": "transparent",
+                                "color": "white",
+                                "fontSize": 18,
+                                "padding": 8,
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            Set as your goal
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          false,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        isTVSelectable={true}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "skyblue",
+                              "borderRadius": 3,
+                              "flexDirection": "row",
+                              "justifyContent": "center",
+                              "width": 300,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "backgroundColor": "transparent",
+                                "color": "white",
+                                "fontSize": 18,
+                                "padding": 8,
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            Clear goal
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Pedometer.isAvailableAsync(): 
+                checking
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Steps taken in the last 24 hours: 
+                0
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              />
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Walk! And watch this go up: 
+                0
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                Current daily stepgoal: 
+                10000
+              </Text>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "height": 100,
+                    "justifyContent": "center",
+                    "padding": 20,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#a30000",
+                      "flex": 0,
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "lightgrey",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
+                  >
+                    0%
+                  </Text>
+                </View>
+              </View>
+              <TextInput
+                allowFontScaling={true}
+                onChangeText={[Function]}
+                placeholder="Type your new stepcount goal here"
+                placeholderTextColor="black"
+                style={
+                  Object {
+                    "borderColor": "gray",
+                    "borderWidth": 1,
+                    "color": "black",
+                    "height": 40,
+                  }
+                }
+              />
+              <View
+                style={
+                  Array [
+                    undefined,
+                    false,
+                  ]
+                }
+              >
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "orange",
+                        "borderRadius": 3,
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                        "width": 300,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "white",
+                          "fontSize": 18,
+                          "padding": 8,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Set as your goal
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "backgroundColor": "#3d3d3d",
+        "borderTopColor": "rgba(0, 0, 0, .3)",
+        "borderTopWidth": 0.5,
+        "flexDirection": "row",
+        "height": "10%",
+        "paddingBottom": 20,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="Home"
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          },
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 29,
+            },
+            false,
+            Object {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 1,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 0,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#3478f6",
+            "fontSize": 11,
+            "marginBottom": 1.5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Home
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Todo"
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          },
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 29,
+            },
+            false,
+            Object {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 0,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 1,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#929292",
+            "fontSize": 11,
+            "marginBottom": 1.5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Todo
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Settings"
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          },
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 29,
+            },
+            false,
+            Object {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 0,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": "100%",
+              "justifyContent": "center",
+              "minWidth": 25,
+              "opacity": 1,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#929292",
+            "fontSize": 11,
+            "marginBottom": 1.5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Settings
+      </Text>
+    </View>
+  </View>
+</View>
+`;

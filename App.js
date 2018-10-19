@@ -1,24 +1,23 @@
 import React from "react";
 import { createBottomTabNavigator } from "react-navigation";
-import { StyleSheet, Text, View } from "react-native";
 
 import { HomeScreen, SettingsScreen, TodoScreen } from "./screens/";
 import { loadData } from "./utils/localstorage.js";
-import styles from "./screens/styles.js";
 
 // createStackNavigator() funksjonen returnerer et react-objekt, som skal brukes som root-component!
 
-
+let defaultRouteName = "Home";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+    defaultRouteName = this.props.defaultScreen;
     this.state = {
       theme: "white",
       bgColor: "white",
       color: "black",
       currentTheme: "defaultmode",
-      initialRouteName: "Home",
+      initialRouteName: "Home"
     };
   }
 
@@ -42,13 +41,12 @@ export default class App extends React.Component {
 
   checkTheme = () => {
     loadData("theme").then(result => this.handleThemeChange(result));
-  }
-  componentDidMount(){
+  };
+  componentDidMount() {
     loadData("theme").then(result => this.handleThemeChange(result));
   }
 
   render() {
-
     console.log(this.state.bgColor);
     console.log(this.state.theme);
     const screenProps = {
@@ -69,11 +67,13 @@ export const RootStack = createBottomTabNavigator(
     Settings: { screen: SettingsScreen }
   },
   {
-    initialRouteName: "Home", // Defines starting screen (initial route)
+    initialRouteName: defaultRouteName, // Defines starting screen (initial route)
     tabBarOptions: {
-      style: {backgroundColor: "#3d3d3d",
-              paddingBottom: 20,
-              height: "10%"}
+      style: {
+        backgroundColor: "#3d3d3d",
+        paddingBottom: 20,
+        height: "10%"
+      }
     }
-  },
+  }
 );
