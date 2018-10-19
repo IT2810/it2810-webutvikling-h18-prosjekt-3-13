@@ -24,7 +24,13 @@ export default class PedometerSensor extends React.Component {
   // When mounting loads from AsyncStorage the value saved as StepGoal
   // This will be whatever the user last set as a stepGoal in the app.
   componentDidMount() {
-    loadData("stepGoal").then(result => this.setState({ stepGoal: result }));
+    loadData("stepGoal").then(result => {
+      if (result === null) {
+        this.setState({ stepGoal: 5000 });
+      } else {
+        this.setState({ stepGoal: result });
+      }
+    });
     this._subscribe();
   }
 
