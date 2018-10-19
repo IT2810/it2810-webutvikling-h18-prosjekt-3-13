@@ -14,7 +14,7 @@ App-en består av tre screens som kan byttes mellom ved hjelp av navigasjonsfane
 
 
 ### Tabs
-Løsningen vi valgte for tabs var via ‘react-navigation’-biblioteket. Dette gir oss muligheten til å lage en tab-bar etter egne spesifikasjoner ved å mate inn et JSON-objekt når tab-en initialiseres. Her brukes da createBottomTabNavigator()-funksjonen.
+Løsningen vi valgte for tabs var via ```‘react-navigation’```-biblioteket. Dette gir oss muligheten til å lage en tab-bar etter egne spesifikasjoner ved å mate inn et JSON-objekt når tab-en initialiseres. Her brukes da createBottomTabNavigator()-funksjonen.
 
 ### Asyncstorage
 Asyncstorage har vi implementert i fila utils/localstorage.js. Her har vi to funksjoner som kan brukes – saveData og loadData. saveData tar inn data som skal lagres, og hvilken key dette skal lagres på. loadData tar kun inn en key, der dataen skal hentes opp fra. loadData returnerer et promise når den blir kjørt, så denne krever at man håndterer det riktig. Dette er en veldig enkel implementasjon, og ville hatt noen utfordringer dersom det skulle brukes i produsjon. For eksempel sjekkes det ikke om nøkkelen eksisterer, og nøkkelen trenger ikke være på et visst format. Hvilket som helst sted koden kan man også lagre og laste til localstorage. Dette kan medføre sikkerhetsproblemer, ettersom at state kan endres på denne måten. Disse problemene er enkle å fikse, men vi gjorde ikke noe med det i denne omgang, ettersom appen kun skulle ha nødvendig funksjonalitet.
