@@ -1,6 +1,7 @@
 # it2810-webutvikling-h18-prosjekt-3-13
 
-![](homeScreen.gif)
+Her er Gif-filer som raskt viser hvordan appen ser ut, og det meste av funksjonaliteten i appen.
+![](homeScreenSmaller.gif) ![](todoScreenSmaller.gif) ![](settingsScreenSmaller.gif)
 
 Kilder:
 - Todo-liste: https://hellokoding.com/todo-app-with-react-native/
