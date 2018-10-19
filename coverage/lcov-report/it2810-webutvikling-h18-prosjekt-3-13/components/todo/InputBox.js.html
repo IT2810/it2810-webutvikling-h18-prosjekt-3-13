@@ -106,7 +106,8 @@
 61
 62
 63
-64</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+64
+65</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -118,32 +119,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -169,66 +171,67 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import {TextInput, View} from 'react-native';
-import {Icon} from "react-native-elements";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+import { TextInput, View } from "react-native";
+import { Icon } from "react-native-elements";
 &nbsp;
 import { styles } from "../../screens/styles.js";
 &nbsp;
 class InputBox extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
+  }
+&nbsp;
+  componentWillMount() {
+    // Setts initial value of box to blank, so that the placeholder will display
+    this.setState({
+      newValue: ""
+    });
+  }
+&nbsp;
+  onChange = <span class="fstat-no" title="function not covered" >ev</span>ent =&gt; {
+    // Keeps state updated with current value of inputbox
+    let title = <span class="cstat-no" title="statement not covered" >event.nativeEvent.text;</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
+      newValue: title
+    });
+  };
+&nbsp;
+  onKeyPress = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    // Sends input from inputbox to TodoApp for adding to task list
+<span class="cstat-no" title="statement not covered" >    if (this.state.newValue) {</span>
+      const task = <span class="cstat-no" title="statement not covered" >this.state.newValue;</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+        newValue: ""
+      });
+<span class="cstat-no" title="statement not covered" >      this.props.onAdd(task);</span>
     }
+  };
 &nbsp;
-    componentWillMount() { // Setts initial value of box to blank, so that the placeholder will display
-        this.setState({
-            newValue: ''
-        });
-    }
-&nbsp;
-    onChange = <span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; { // Keeps state updated with current value of inputbox
-        let title = <span class="cstat-no" title="statement not covered" >event.nativeEvent.text;</span>
-<span class="cstat-no" title="statement not covered" >        this.setState({</span>
-            newValue: title
-        });
-    };
-&nbsp;
-    onKeyPress = <span class="fstat-no" title="function not covered" >()</span> =&gt; { // Sends input from inputbox to TodoApp for adding to task list
-<span class="cstat-no" title="statement not covered" >        if (this.state.newValue) {</span>
-            const task = <span class="cstat-no" title="statement not covered" >this.state.newValue;</span>
-<span class="cstat-no" title="statement not covered" >            this.setState({</span>
-                newValue: ''
-            });
-<span class="cstat-no" title="statement not covered" >            this.props.onAdd(task);</span>
-        }
-    };
-&nbsp;
-    render() {
-        return (
-            &lt;View style={styles(this.props.screenProps).inPutBoxTodo}
-                &gt;
-                &lt;TextInput style={styles(this.props.screenProps).inPutBoxTodoText}
-                           placeholderTextColor={this.props.screenProps.color}
-                           placeholder='Add a task'
-                           blurOnSubmit={false}
-                           value={this.state.newValue}
-                           onSubmitEditing={this.onKeyPress}
-                           onChange={this.onChange}&gt;
-                &lt;/TextInput&gt;
-                &lt;View
-                    style={this.state.newValue ? <span class="branch-0 cbranch-no" title="branch not covered" >{} </span>: {display: "none"}}
-                    &gt;
-                    &lt;Icon
-                        size={35}
-                        type="material-community"
-                        name='plus-circle-outline'
-                        color='#00aced'
-                        onPress={this.onKeyPress}
-                    /&gt;
-                &lt;/View&gt;
-            &lt;/View&gt;
-        );
-    }
+  render() {
+    return (
+      &lt;View style={styles(this.props.screenProps).inPutBoxTodo}&gt;
+        &lt;TextInput
+          style={styles(this.props.screenProps).inPutBoxTodoText}
+          placeholderTextColor={this.props.screenProps.color}
+          placeholder="Add a task"
+          blurOnSubmit={false}
+          value={this.state.newValue}
+          onSubmitEditing={this.onKeyPress}
+          onChange={this.onChange}
+        /&gt;
+        &lt;View style={this.state.newValue ? <span class="branch-0 cbranch-no" title="branch not covered" >{} </span>: { display: "none" }}&gt;
+          &lt;Icon
+            size={35}
+            type="material-community"
+            name="plus-circle-outline"
+            color="#00aced"
+            onPress={this.onKeyPress}
+          /&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    );
+  }
 }
 &nbsp;
 module.exports = InputBox;
@@ -238,7 +241,7 @@ module.exports = InputBox;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 19 2018 16:54:00 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 19 2018 18:58:27 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

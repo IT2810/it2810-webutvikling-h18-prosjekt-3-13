@@ -96,8 +96,30 @@
 51
 52
 53
-54</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -107,7 +129,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -130,6 +154,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,8 +181,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,56 +195,79 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import {Text, View} from 'react-native';
-import { ListItem, Icon} from 'react-native-elements';
-import { styles } from '../../screens/styles.js';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+import { Text, View } from "react-native";
+import { ListItem, Icon } from "react-native-elements";
 &nbsp;
-class ListObject extends React.Component{
-    constructor(props) {
-        super(props);
-    }
+class ListObject extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 &nbsp;
-    onCompletePress = <span class="fstat-no" title="function not covered" >()</span> =&gt; { // Function for passing completion-event to TodoApp
-<span class="cstat-no" title="statement not covered" >        this.props.handleChange(this.props.data);</span>
-    };
+  onCompletePress = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    // Function for passing completion-event to TodoApp
+<span class="cstat-no" title="statement not covered" >    this.props.handleChange(this.props.data);</span>
+  };
 &nbsp;
-    onDeletePress = <span class="fstat-no" title="function not covered" >()</span> =&gt; { // Function for passing deletion-event to TodoApp
-<span class="cstat-no" title="statement not covered" >        this.props.handleDelete(this.props.data);</span>
-    };
+  onDeletePress = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    // Function for passing deletion-event to TodoApp
+<span class="cstat-no" title="statement not covered" >    this.props.handleDelete(this.props.data);</span>
+  };
 &nbsp;
-    render() {
-        return (
-                &lt;ListItem
-                    containerStyle={{ backgroundColor: this.props.screenProps.bg }}
-                        key={this.props.data.createdAt}
-                        title={
-                            &lt;View style={{paddingLeft: "2%", backgroundColor: this.props.screenProps.bg}}&gt;
-                                &lt;Text style={this.props.data.completed ? <span class="branch-0 cbranch-no" title="branch not covered" >{textDecorationLine: 'line-through', textDecorationStyle: 'solid', color: "lightgrey"} </span>: {color: this.props.screenProps.color}}&gt;{this.props.data.task}&lt;/Text&gt;
-                            &lt;/View&gt;}
-                        rightIcon={
-                                &lt;Icon
-                                size={26}
-                                type="material-community"
-                                name='delete'
-                                color='#00aced'
-                                onPress={this.onDeletePress}
-                                onLongPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >console.log("ignore")}</span>
-                            /&gt;}
-                        leftIcon={
-                            &lt;Icon
-                                size={35}
-                                type="material-community"
-                                name={this.props.data.completed ? <span class="branch-0 cbranch-no" title="branch not covered" >'check-circle' </span>: 'checkbox-blank-circle-outline'}
-                                color='#00aced'
-                                onPress={this.onCompletePress}
-                                onLongPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >console.log("ignore aswaell")}</span>
-                            /&gt;
-                        }
-                    /&gt;
-&nbsp;
-        );
-    }
+  render() {
+    return (
+      &lt;ListItem
+        containerStyle={{ backgroundColor: this.props.screenProps.bg }}
+        key={this.props.data.createdAt}
+        title={
+          &lt;View
+            style={{
+              paddingLeft: "2%",
+              backgroundColor: this.props.screenProps.bg
+            }}
+          &gt;
+            &lt;Text
+              style={
+                this.props.data.completed
+                  ? <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+                      textDecorationLine: "line-through",
+                      textDecorationStyle: "solid",
+                      color: "lightgrey"
+                    }
+                  : { color: this.props.screenProps.color }
+              }
+            &gt;
+              {this.props.data.task}
+            &lt;/Text&gt;
+          &lt;/View&gt;
+        }
+        rightIcon={
+          &lt;Icon
+            size={26}
+            type="material-community"
+            name="delete"
+            color="#00aced"
+            onPress={this.onDeletePress}
+            onLongPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >console.log("ignore")}</span>
+          /&gt;
+        }
+        leftIcon={
+          &lt;Icon
+            size={35}
+            type="material-community"
+            name={
+              this.props.data.completed
+                ? <span class="branch-0 cbranch-no" title="branch not covered" >"check-circle"</span>
+                : "checkbox-blank-circle-outline"
+            }
+            color="#00aced"
+            onPress={this.onCompletePress}
+            onLongPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >console.log("ignore aswaell")}</span>
+          /&gt;
+        }
+      /&gt;
+    );
+  }
 }
 &nbsp;
 module.exports = ListObject;
@@ -208,7 +277,7 @@ module.exports = ListObject;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 19 2018 16:54:00 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 19 2018 18:58:27 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
