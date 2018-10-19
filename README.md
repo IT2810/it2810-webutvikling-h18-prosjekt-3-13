@@ -9,19 +9,25 @@ I følgende prosjektet har vi laget en Personal Information and Motivation Manag
  - Tilpassing av app-en til dag- eller natt-tema.
 
 
-
+### Screens
 App-en består av tre screens som kan byttes mellom ved hjelp av navigasjonsfaner, også kalt tabs. 
 
 
-
+### Tabs
 Løsningen vi valgte for tabs var via ‘react-navigation’-biblioteket. Dette gir oss muligheten til å lage en tab-bar etter egne spesifikasjoner ved å mate inn et JSON-objekt når tab-en initialiseres. Her brukes da createBottomTabNavigator()-funksjonen.
 
+### Asyncstorage
+Asyncstorage har vi implementert i fila utils/localstorage.js. Her har vi to funksjoner som kan brukes – saveData og loadData. saveData tar inn data som skal lagres, og hvilken key dette skal lagres på. loadData tar kun inn en key, der dataen skal hentes opp fra. loadData returnerer et promise når den blir kjørt, så denne krever at man håndterer det riktig. Dette er en veldig enkel implementasjon, og ville hatt noen utfordringer dersom det skulle brukes i produsjon. For eksempel sjekkes det ikke om nøkkelen eksisterer, og nøkkelen trenger ikke være på et visst format. Hvilket som helst sted koden kan man også lagre og laste til localstorage. Dette kan medføre sikkerhetsproblemer, ettersom at state kan endres på denne måten. Disse problemene er enkle å fikse, men vi gjorde ikke noe med det i denne omgang, ettersom appen kun skulle ha nødvendig funksjonalitet.
 
 
+
+### Todo-app
 For Todo-appen vår brukes ‘react-native-elements’ til å sette opp selve listen med gjøremål. Dette da biblioteket gjør det enkelt å legge inn ikoner i listeementet på en god måte. Ved dette fikk vi muligheten til å bruke Icon fra samme bibliotek som prop (leftIcon etc.) i ListItem. Ellers er alle andre bibliotek enten fra ’react’ eller ‘react-native’. 
 
+### Goal
 Goal – som ligger under skrittelleroversikten i HomeScreen – består av en DailyGoalContainer (heretter Container), som igjen inneholder et DailyGoalForm (heretter Form). I tillegg til å inneholde et Form ligger tekstpresentasjonen i Container, som viser hvilket mål som er det gjeldende målet. Dersom det ikke finnes et mål i localstorage og brukeren ikke har satt et mål enda, vil dette målet være en standardmeling. Om det finnes et mål i localstorage blir det vist. Ved å skrive inn et nytt mål og legge til dette, blir det gamle målet skrevet over i localstorage, og det nye målet blir presentert. Det er også en knapp for å fjerne målet sitt. Da blir målet fjernet i localstorage også. Implementerte først funksjonalitet for å ha flere mål samtidig, men dette ble ikke med i den siste versjonen.
 
+### Pedometer/skritteller
 Pedometer-komponenten henter inn skrittdata fra asynkron lagring (hvis tilgjengelig). Dette hentes fra mobiltelefonens helsedata, enten det er iOS eller Android. MERK dette vil derfor ikke fungere hvis en bruker en emulator på datamaskin, da det ikke er noe data tilgjengelig å hente her, men vil fungere ved testing på mobil. Appen vil kunne kjøre på emulator, men du vil ikke få opp noen tall for skrittdata.
 
 
