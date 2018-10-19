@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>3/3</span>
       </div>
     </div>
   </div>
@@ -81,14 +81,7 @@
 36
 37
 38
-39
-40
-41
-42
-43
-44
-45</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+39</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -107,18 +100,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -133,55 +121,49 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
 import { Component } from "react";
-import DailyGoalForm from "../components/DailyGoalForm";
 import DailyGoalContainer from "../components/DailyGoalContainer";
-import saveData from "../utils/localstorage";
-import { loadData } from "../utils/localstorage";
 import PedometerSensor from "../components/Pedometer.js";
+import { Icon } from "react-native-elements";
 &nbsp;
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button, ScrollView } from "react-native";
 import { styles } from "./styles.js";
 &nbsp;
+// Class for the HomeScreen component
 export default class HomeScreen extends Component {
   constructor(props) {
     super(props);
   }
 &nbsp;
+  // Values for the Tab in the BottomTabNavigator, title and icon.
   static navigationOptions = {
-    title: "Home"
+    title: "Home",
+    tabBarIcon: () =&gt; (
+      &lt;Icon size={26} type="material-community" name="home" color="#00aced" /&gt;
+    )
   };
 &nbsp;
+  // Renders components for the HomeScreen (Views, with scrollView and a PedometerSensor and a DailyGoalContainer)
   render() {
-    console.log(this.props.screenProps);
-    const { navigation, screenProps } = this.props;
     return (
       &lt;View style={styles(this.props.screenProps).container}&gt;
-        &lt;View style={styles(this.props.screenProps).topBox}&gt;&lt;/View&gt;
-        &lt;View
-          style={[
-            styles(this.props.screenProps).container,
-          ]}
+        &lt;View style={styles(this.props.screenProps).topBox} /&gt;
+        &lt;ScrollView
+          contentContainerStyle={styles(this.props.screenProps).scrollViewStyle}
         &gt;
-          &lt;Text style={styles(this.props.screenProps).text}&gt;Home Screen&lt;/Text&gt;
-          &lt;Text style={styles(this.props.screenProps).text}&gt;{screenProps.someText}&lt;/Text&gt;
-          &lt;DailyGoalContainer screenProps={this.props.screenProps}/&gt;
-          &lt;PedometerSensor screenProps={this.props.screenProps}/&gt;
-        &lt;/View&gt;
+          &lt;PedometerSensor screenProps={this.props.screenProps} /&gt;
+          &lt;DailyGoalContainer screenProps={this.props.screenProps} /&gt;
+        &lt;/ScrollView&gt;
       &lt;/View&gt;
     );
   }
 }
-&nbsp;
-// If calling navigate --&gt; stacknavigator will check for existing route, if no existing, it will add the route to the stack. If you for some reason want to add another route of a preexisting route on the stack (I.E to pass unique params) --&gt; use push() instead of navigate().
-&nbsp;
-//If you want to force user to go back, call this.props.navigation.goBack()
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 19 2018 16:27:33 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 19 2018 16:54:00 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

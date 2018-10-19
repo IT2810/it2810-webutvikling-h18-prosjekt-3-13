@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.5% </span>
+        <span class="strong">42.86% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/8</span>
+        <span class='fraction'>3/7</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>2/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">28.57% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/7</span>
+        <span class='fraction'>2/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.5% </span>
+        <span class="strong">42.86% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/8</span>
+        <span class='fraction'>3/7</span>
       </div>
     </div>
   </div>
@@ -96,10 +96,7 @@
 51
 52
 53
-54
-55
-56
-57</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+54</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -107,10 +104,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -136,14 +129,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,7 +139,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import {Text, View} from 'react-native';
 import { ListItem, Icon} from 'react-native-elements';
@@ -165,25 +159,22 @@ class ListObject extends React.Component{
         super(props);
     }
 &nbsp;
-    onCompletePress = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    onCompletePress = <span class="fstat-no" title="function not covered" >()</span> =&gt; { // Function for passing completion-event to TodoApp
 <span class="cstat-no" title="statement not covered" >        this.props.handleChange(this.props.data);</span>
     };
 &nbsp;
-    onDeletePress = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    onDeletePress = <span class="fstat-no" title="function not covered" >()</span> =&gt; { // Function for passing deletion-event to TodoApp
 <span class="cstat-no" title="statement not covered" >        this.props.handleDelete(this.props.data);</span>
-    };
-&nbsp;
-    test = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        alert("listItem")</span>
     };
 &nbsp;
     render() {
         return (
                 &lt;ListItem
+                    containerStyle={{ backgroundColor: this.props.screenProps.bg }}
                         key={this.props.data.createdAt}
                         title={
                             &lt;View style={{paddingLeft: "2%", backgroundColor: this.props.screenProps.bg}}&gt;
-                                &lt;Text style={this.props.data.completed ? <span class="branch-0 cbranch-no" title="branch not covered" >{textDecorationLine: 'line-through', textDecorationStyle: 'solid', color: this.props.screenProps.color} </span>: {color: this.props.screenProps.color}}&gt;{this.props.data.task}&lt;/Text&gt;
+                                &lt;Text style={this.props.data.completed ? <span class="branch-0 cbranch-no" title="branch not covered" >{textDecorationLine: 'line-through', textDecorationStyle: 'solid', color: "lightgrey"} </span>: {color: this.props.screenProps.color}}&gt;{this.props.data.task}&lt;/Text&gt;
                             &lt;/View&gt;}
                         rightIcon={
                                 &lt;Icon
@@ -217,7 +208,7 @@ module.exports = ListObject;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 19 2018 16:27:33 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 19 2018 16:54:00 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

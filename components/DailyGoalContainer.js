@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import DailyGoal from "./DailyGoal";
 import { View, Text } from "react-native";
 import saveData from "../utils/localstorage";
 import { loadData } from "../utils/localstorage";
@@ -51,10 +50,10 @@ class DailyGoalContainer extends Component {
     } else {
       return (
         <View style={{ alignItems: "center" }}>
-          <Text style={styles(this.props.screenProps).textGoal}>Current goal:</Text>
-          <Text
-            style={styles(this.props.screenProps).textCurrentGoal}
-          >
+          <Text style={styles(this.props.screenProps).textGoal}>
+            Current goal:
+          </Text>
+          <Text style={styles(this.props.screenProps).textCurrentGoal}>
             {this.state.mainGoal}
           </Text>
         </View>
@@ -73,7 +72,7 @@ class DailyGoalContainer extends Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <View style={{ flex: 2}}>{this.getPlaceholderGoal()}</View>
+        <View style={{ flex: 2 }}>{this.getPlaceholderGoal()}</View>
         <View style={{ flex: 8 }}>
           <DailyGoalForm
             onNewGoal={this.addNewGoal}
