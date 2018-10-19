@@ -10,7 +10,11 @@ import { loadData } from "../utils/localstorage.js";
 import { styles } from '../screens/styles.js';
 
 
+// Uses Google Fit on Android, and Core Motion on iOS to get users stepcount
+
+// PedometerSensor class (component)
 export default class PedometerSensor extends React.Component {
+  // State to keep track of steps, goal.
   state = {
     isPedometerAvailable: "checking",
     pastStepCount: 0,
@@ -19,6 +23,8 @@ export default class PedometerSensor extends React.Component {
     stepGoal: 10000,
   };
 
+  // When mounting loads from AsyncStorage the value saved as StepGoal
+  // This will be whatever the user last set as a stepGoal in the app.
   componentDidMount() {
     loadData("stepGoal").then(result => this.setState({stepGoal: result}))
     this._subscribe();
@@ -28,6 +34,7 @@ export default class PedometerSensor extends React.Component {
     this._unsubscribe();
   }
 
+  // Function to set a new stepGoal. Will also save it in AsyncStorage
   updateStepGoal = () => {
     // Only change goal if it is a number greater than 0 and does not contain '.'
     if(!(isNaN(this.state.inputText)) && this.state.inputText > 0 && !(this.state.inputText.indexOf('.') > -1)){
@@ -35,6 +42,7 @@ export default class PedometerSensor extends React.Component {
       stepGoal: this.state.inputText,
       }
     );
+      // Saves the new stepGoal from the inputText component (react-native-elements) in the AsyncStorage with key "stepGoal"
       saveData("stepGoal", this.state.inputText);
     }
     this.setState({
@@ -42,6 +50,7 @@ export default class PedometerSensor extends React.Component {
     })
   };
 
+  // Listens for changes in stepcount
   _subscribe = () => {
     this._subscription = Pedometer.watchStepCount(result => {
       this.setState({
@@ -62,6 +71,7 @@ export default class PedometerSensor extends React.Component {
       }
     );
 
+    // Finds the amount of steps walked in the past 24 hours.
     const end = new Date();
     const start = new Date();
     start.setDate(end.getDate() - 1);
@@ -77,11 +87,13 @@ export default class PedometerSensor extends React.Component {
     );
   };
 
+  // Function to find how many percent of the stepGoal is reached.
   getProgressPercent(){
     const progressPercent = this.state.pastStepCount/this.state.stepGoal;
     return Math.floor(progressPercent*100);
   }
 
+  // Function that returns a colorvalue depending on the current percent reached of the stepgoal.
   getProgressColor(){
     if(this.state.pastStepCount/this.state.stepGoal >= 1){
       return "skyblue";
@@ -100,16 +112,17 @@ export default class PedometerSensor extends React.Component {
     }
   }
 
+  // No longer listens for steps
   _unsubscribe = () => {
     this._subscription && this._subscription.remove();
     this._subscription = null;
   };
 
+  // Render function, returns the inputField, the progressCircle, stepcount and button.
   render() {
     const {textStyle} = this.props;
     const progressColor = this.getProgressColor();
-    const leftText = this.getProgressPercent("left");
-    const rightText = this.getProgressPercent("right");
+
     return (
       <View style={{alignItems: "center"}}>
           <View style={{marginTop: 25}}/>
@@ -132,9 +145,6 @@ export default class PedometerSensor extends React.Component {
               onChangeText={text => this.setState({ inputText: text })}
               value={this.state.inputText}
           />
-
-
-
 
         <Button
           title="Set goal"

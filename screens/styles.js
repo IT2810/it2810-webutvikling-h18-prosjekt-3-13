@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import primaryColor from '../App.js';
 
+// Styles file to export stylesheet that can be used by all components. Takes in props passed from App.js to RootStack and further down the component-tree.
 export const styles = (props) => StyleSheet.create({
     topBox:{
         height: "5%",
