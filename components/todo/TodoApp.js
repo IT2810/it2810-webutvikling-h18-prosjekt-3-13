@@ -17,16 +17,14 @@ class TodoApp extends React.Component {
         let initList = [];
 
         if (this.props.test) {
-        for (i = 0; i < 4; i++) {
-            initList.push(new TodoModel("Heihei", false));
+            for (i = 0; i < 4; i++) {
+                initList.push(new TodoModel("Heihei", false));
+            }
         }
-    }
 
-    this.state = {
-        dataList: initList
-      }
-    }
-
+        this.state = {
+            dataList: initList
+        }
     }
 
     componentDidMount() { // Loads result from Async into state i.e. previous saved tasks
@@ -34,7 +32,7 @@ class TodoApp extends React.Component {
     }
 
     componentDidUpdate() { // Save current tasks to Async
-        saveData("TodoAppState", this<.state);
+        saveData("TodoAppState", this.state);
     }
 
     addTodoItem = (task) => { // Takes in a task, adds to list, updates state
@@ -121,31 +119,7 @@ class TodoApp extends React.Component {
                 {renderLists()}
             </View>
         );
-      } else {
-        return (
-          <View style={styles(this.props.screenProps).toDoLists2}>
-            <Text
-              style={{ fontSize: 50, color: "lightgrey", textAlign: "center" }}
-            >
-              All todo's completed
-            </Text>
-          </View>
-        );
       }
     };
-    return (
-      <View style={styles(this.props.screenProps).toDoLists3}>
-        <InputBox
-          screenProps={this.props.screenProps}
-          style={{
-            flex: 1
-          }}
-          onAdd={this.handleAdd}
-        />
-        {renderLists()}
-      </View>
-    );
-  }
-}
 
 module.exports = TodoApp;
