@@ -8,17 +8,17 @@ class PartList extends React.Component{
         super(props);
     }
 
-    onCompletePress = (task) => {
+    onCompletePress = (task) => { // Passtrough-function for completion to ToDoApp
         this.props.handleChange(task);
     };
 
-    onDeletePress = (task) => {
+    onDeletePress = (task) => { // Passtrough-function for deletion to ToDoApp
         this.props.handleDelete(task);
     };
 
     render() {
         return (
-            <View style={{backgroundColor: "blue"}}>
+            <View>
             {this.props.list.map(item =>
                 <ListObject screenProps={this.props.screenProps} key={item.createdAt} data={item} handleDelete={this.onDeletePress} handleChange={this.onCompletePress
                 }/>

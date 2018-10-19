@@ -17,6 +17,10 @@
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-native-elements": "^1.0.0-beta5",
+<<<<<<< HEAD
+=======
+    "react-native-progress-circle": "^2.0.0",
+>>>>>>> 16885cec14c3cbac54addfeb32095e17e53e0398
     "react-native-vector-icons": "^5.0.0",
     "react-navigation": "^2.17.0"
   },

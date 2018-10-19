@@ -8,25 +8,22 @@ class ListObject extends React.Component{
         super(props);
     }
 
-    onCompletePress = () => {
+    onCompletePress = () => { // Function for passing completion-event to TodoApp
         this.props.handleChange(this.props.data);
     };
 
-    onDeletePress = () => {
+    onDeletePress = () => { // Function for passing deletion-event to TodoApp
         this.props.handleDelete(this.props.data);
-    };
-
-    test = () => {
-        alert("listItem")
     };
 
     render() {
         return (
                 <ListItem
+                    containerStyle={{ backgroundColor: this.props.screenProps.bg }}
                         key={this.props.data.createdAt}
                         title={
                             <View style={{paddingLeft: "2%", backgroundColor: this.props.screenProps.bg}}>
-                                <Text style={this.props.data.completed ? {textDecorationLine: 'line-through', textDecorationStyle: 'solid', color: this.props.screenProps.color} : {color: this.props.screenProps.color}}>{this.props.data.task}</Text>
+                                <Text style={this.props.data.completed ? {textDecorationLine: 'line-through', textDecorationStyle: 'solid', color: "lightgrey"} : {color: this.props.screenProps.color}}>{this.props.data.task}</Text>
                             </View>}
                         rightIcon={
                                 <Icon

@@ -5,40 +5,42 @@ import DailyGoalContainer from "../components/DailyGoalContainer";
 import saveData from "../utils/localstorage";
 import { loadData } from "../utils/localstorage";
 import PedometerSensor from "../components/Pedometer.js";
+import { Icon } from 'react-native-elements';
 
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button, ScrollView } from "react-native";
 import { styles } from "./styles.js";
 
+
+// Class for the HomeScreen component
 export default class HomeScreen extends Component {
   constructor(props) {
     super(props);
   }
 
+  // Values for the Tab in the BottomTabNavigator, title and icon.
   static navigationOptions = {
-    title: "Home"
+    title: "Home",
+    tabBarIcon: (() => <Icon
+        size={26}
+        type="material-community"
+        name='home'
+        color='#00aced'
+    />)
   };
 
+  // Renders components for the HomeScreen (Views, with scrollView and a PedometerSensor and a DailyGoalContainer)
   render() {
-    console.log(this.props.screenProps);
-    const { navigation, screenProps } = this.props;
+    const { navigation, screenProps } = this.props; // Props to be passed to components of this screen.
     return (
       <View style={styles(this.props.screenProps).container}>
-        <View style={styles(this.props.screenProps).topBox}></View>
-        <View
-          style={[
-            styles(this.props.screenProps).container,
-          ]}
+        <View style={styles(this.props.screenProps).topBox}/>
+        <ScrollView
+            contentContainerStyle={styles(this.props.screenProps).scrollViewStyle}
         >
-          <Text style={styles(this.props.screenProps).text}>Home Screen</Text>
-          <Text style={styles(this.props.screenProps).text}>{screenProps.someText}</Text>
+            <PedometerSensor screenProps={this.props.screenProps}/>
           <DailyGoalContainer screenProps={this.props.screenProps}/>
-          <PedometerSensor screenProps={this.props.screenProps}/>
-        </View>
+        </ScrollView>
       </View>
     );
   }
 }
-
-// If calling navigate --> stacknavigator will check for existing route, if no existing, it will add the route to the stack. If you for some reason want to add another route of a preexisting route on the stack (I.E to pass unique params) --> use push() instead of navigate().
-
-//If you want to force user to go back, call this.props.navigation.goBack()

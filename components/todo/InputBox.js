@@ -9,20 +9,20 @@ class InputBox extends React.Component {
         super(props);
     }
 
-    componentWillMount() {
+    componentWillMount() { // Setts initial value of box to blank, so that the placeholder will display
         this.setState({
             newValue: ''
         });
     }
 
-    onChange = (event) => {
+    onChange = (event) => { // Keeps state updated with current value of inputbox
         let title = event.nativeEvent.text;
         this.setState({
             newValue: title
         });
     };
 
-    onKeyPress = () => {
+    onKeyPress = () => { // Sends input from inputbox to TodoApp for adding to task list
         if (this.state.newValue) {
             const task = this.state.newValue;
             this.setState({
@@ -33,7 +33,6 @@ class InputBox extends React.Component {
     };
 
     render() {
-        console.log("LEEES", this.props);
         return (
             <View style={styles(this.props.screenProps).inPutBoxTodo}
                 >
