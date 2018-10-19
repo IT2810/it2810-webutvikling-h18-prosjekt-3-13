@@ -1,5 +1,6 @@
 # it2810-webutvikling-h18-prosjekt-3-13
 
+![](homeScreen.gif)
 
 Kilder:
 - Todo-liste: https://hellokoding.com/todo-app-with-react-native/
