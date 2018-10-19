@@ -1,15 +1,16 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { Input, Button } from "react-native-elements";
-
-import { styles } from "../screens/styles.js";
 
 class DailyGoalForm extends Component {
   constructor(props) {
     super(props);
+
+    // only state is the input from the form
     this.state = { inputText: "" };
   }
 
+  // add whatever is in the input form as a goal, unless it is an empty string
   addDailyGoal = () => {
     if (this.state.inputText !== "") {
       this.props.onNewGoal({ goalText: this.state.inputText });
@@ -18,10 +19,12 @@ class DailyGoalForm extends Component {
     this.mainInput.clear();
   };
 
+  // simple callback
   clearGoals = () => {
     this.props.clearAllGoals();
   };
 
+  // render function is pretty straight forward
   render() {
     return (
       <View

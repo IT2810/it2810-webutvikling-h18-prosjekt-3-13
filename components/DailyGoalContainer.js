@@ -5,6 +5,7 @@ import { loadData } from "../utils/localstorage";
 import DailyGoalForm from "./DailyGoalForm";
 import { styles } from "../screens/styles.js";
 
+// initial state
 const init = { goals: [], mainGoal: "" };
 
 class DailyGoalContainer extends Component {
@@ -14,7 +15,9 @@ class DailyGoalContainer extends Component {
     this.state = { goals: [], mainGoal: "" };
   }
 
+  // adding a new goal – callback
   addNewGoal = goalObject => {
+    // mainly for scalability in case you want more goals at a time
     let prevGoals = [...this.state.goals];
     let existingText = false;
 
@@ -34,12 +37,15 @@ class DailyGoalContainer extends Component {
     saveData("goals", prevGoals);
   };
 
+  // if the state does not equal inital state, set to inital state – callback
   clearGoals = () => {
     if (this.state !== init) {
       this.setState(init);
     }
   };
 
+  // if goal is empty, return default statement
+  // else, return the goal
   getPlaceholderGoal = () => {
     if (this.state.mainGoal === "") {
       return (
@@ -61,6 +67,7 @@ class DailyGoalContainer extends Component {
     }
   };
 
+  // asyncstorage for loading and saving the state
   componentDidMount() {
     loadData("GoalContainerState").then(result => this.setState(result));
   }
@@ -71,7 +78,14 @@ class DailyGoalContainer extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: 50
+        }}
+      >
         <View style={{ flex: 2 }}>{this.getPlaceholderGoal()}</View>
         <View style={{ flex: 8 }}>
           <DailyGoalForm

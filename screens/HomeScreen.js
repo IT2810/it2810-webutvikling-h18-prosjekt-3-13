@@ -4,7 +4,7 @@ import DailyGoalContainer from "../components/DailyGoalContainer";
 import PedometerSensor from "../components/Pedometer.js";
 import { Icon } from "react-native-elements";
 
-import { StyleSheet, Text, View, Button, ScrollView } from "react-native";
+import { View, ScrollView } from "react-native";
 import { styles } from "./styles.js";
 
 // Class for the HomeScreen component
