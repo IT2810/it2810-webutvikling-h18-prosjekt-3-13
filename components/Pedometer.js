@@ -1,9 +1,10 @@
 import Expo from "expo";
 import React from "react";
 import { Pedometer } from "expo";
-import { Button } from "react-native-elements";
+import {Button, Input} from "react-native-elements";
 import { StyleSheet, Text, View } from "react-native";
 import { AppRegistry, TextInput } from 'react-native';
+import ProgressCircle from 'react-native-progress-circle';
 import saveData from "../utils/localstorage.js";
 import { loadData } from "../utils/localstorage.js";
 import { styles } from '../screens/styles.js';
@@ -14,7 +15,7 @@ export default class PedometerSensor extends React.Component {
     isPedometerAvailable: "checking",
     pastStepCount: 0,
     currentStepCount: 0,
-    inputText: "Type your new stepgoal here",
+    inputText: "",
     stepGoal: 10000,
   };
 
@@ -36,7 +37,10 @@ export default class PedometerSensor extends React.Component {
     );
       saveData("stepGoal", this.state.inputText);
     }
-  }
+    this.setState({
+        inputText: ''
+    })
+  };
 
   _subscribe = () => {
     this._subscription = Pedometer.watchStepCount(result => {
@@ -73,37 +77,26 @@ export default class PedometerSensor extends React.Component {
     );
   };
 
-  getProgressPercent(direction){
+  getProgressPercent(){
     const progressPercent = this.state.pastStepCount/this.state.stepGoal;
-    if(direction == "left"){
-      if(progressPercent > 0.5){
-        return Math.floor(progressPercent*100)+'%';
-      }
-      else return "";
-    }
-    if(direction == "right"){
-      if(1 - progressPercent > 0.5){
-        return Math.floor(progressPercent*100)+'%';
-      }
-      else return "";
-    }
+    return Math.floor(progressPercent*100);
   }
 
   getProgressColor(){
     if(this.state.pastStepCount/this.state.stepGoal >= 1){
-      return "#49e800";
+      return "skyblue";
     }
     else if(this.state.pastStepCount/this.state.stepGoal >= 0.9){
-      return "#a5ff00";
+      return "#b819fc";
     }
     else if(this.state.pastStepCount/this.state.stepGoal >= 0.5){
-      return "yellow";
+      return "#d3f2ff";
     }
     else if(this.state.pastStepCount/this.state.stepGoal >= 0.33){
-      return "orange";
+      return "#e8f8ff";
     }
     else{
-      return "#a30000";
+      return "#ffffff";
     }
   }
 
@@ -118,41 +111,34 @@ export default class PedometerSensor extends React.Component {
     const leftText = this.getProgressPercent("left");
     const rightText = this.getProgressPercent("right");
     return (
-      <View>
-        <Text style={styles(this.props.screenProps).text}>
-          Pedometer.isAvailableAsync(): {this.state.isPedometerAvailable}
-        </Text>
-        <Text style={styles(this.props.screenProps).text}>
-          Steps taken in the last 24 hours: {this.state.pastStepCount}
-        </Text>
+      <View style={{alignItems: "center"}}>
+          <View style={{marginTop: 25}}/>
+          <ProgressCircle radius={110} percent={this.getProgressPercent()} borderWidth={10} color={"orange"} bgColor={this.getProgressColor()}><Text style={styles(this.props.screenProps).progressCircleText}>{"step count: " + this.state.pastStepCount.toString() + "\nCurrent goal: " + this.state.stepGoal}</Text></ProgressCircle>
         <Text style={styles(this.props.screenProps).text}>
           {textStyle}
         </Text>
-        <Text style={styles(this.props.screenProps).text}>Walk! And watch this go up: {this.state.currentStepCount}</Text>
-        <Text style={styles(this.props.screenProps).text}>Current daily stepgoal: {this.state.stepGoal}</Text>
-        <View
-          style={{
-            flexDirection: 'row',
-            height: 100,
-            padding: 20,
-            justifyContent: "center",
-          }}>
-          <View style={{backgroundColor: progressColor, flex: (this.state.pastStepCount/this.state.stepGoal), justifyContent: "center", alignItems: "center"}}>
-          <Text style={{color: "black"}}>{leftText}</Text></View>
-          <View style={{backgroundColor: "lightgrey", flex: (1- this.state.pastStepCount/this.state.stepGoal), justifyContent: "center", alignItems: "center"}}><Text style={{color: "black"}}>{rightText}</Text>
-          </View>
-        </View>
-        <TextInput
-          placeholderTextColor={this.props.screenProps.color}
-          placeholder={"Type your new stepcount goal here"}
-          style={{height: 40, borderColor: 'gray', borderWidth: 1, color: this.props.screenProps.color}}
-          onChangeText={(text) => this.setState({text})}
-          value={this.state.text}
-          onChangeText={text => this.setState({ inputText: text })}
-        />
+          <Input
+              placeholderTextColor={this.props.screenProps.color}
+              placeholder={"New step goal"}
+              inputContainerStyle={{
+                  width: "60%",
+                  margin: 10,
+                  alignSelf: "stretch",
+              }}
+              inputStyle={{
+                  color: this.props.screenProps.color
+              }}
+              onChangeText={(text) => this.setState({text})}
+              onChangeText={text => this.setState({ inputText: text })}
+              value={this.state.inputText}
+          />
+
+
+
+
         <Button
-          title="Set as your goal"
-          buttonStyle={{ backgroundColor: "orange", width: 300 }}
+          title="Set goal"
+          buttonStyle={{ backgroundColor: "orange", marginBottom: 20}} //MarginBottom her
           onPress={this.updateStepGoal}
         />
       </View>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 
 import { StyleSheet, Text, View, Button} from 'react-native';
+import { Icon } from 'react-native-elements';
 import { styles } from './styles.js';
 
 import saveData from '../utils/localstorage.js';
@@ -11,7 +12,13 @@ export default class SettingsScreen extends Component{
 
 
   static navigationOptions = {
-    title: 'Settings'
+    title: 'Settings',
+      tabBarIcon: (() => <Icon
+          size={26}
+          type="material-community"
+          name='settings'
+          color='#00aced'
+      />)
   };
 
   handleThemeOnePress = () => {

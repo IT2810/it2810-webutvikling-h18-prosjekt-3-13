@@ -4,10 +4,15 @@ import primaryColor from '../App.js';
 export const styles = (props) => StyleSheet.create({
     topBox:{
         height: "5%",
-        backgroundColor: props.bg,
+        backgroundColor: props.bgSec,
     },
     container: {
         flex: 1,
+        backgroundColor: props.bg,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    scrollViewStyle: {
         backgroundColor: props.bg,
         alignItems: 'center',
         justifyContent: 'center',
@@ -16,11 +21,11 @@ export const styles = (props) => StyleSheet.create({
         color: props.color,
     },
     textGoal:{
-        fontSize: 10,
+        fontSize: 15,
         color: props.color,
     },
     textCurrentGoal:{
-        fontSize: 20,
+        fontSize: 30,
         fontWeight: "bold",
         textAlign: "center",
         color: props.color,
@@ -35,8 +40,16 @@ export const styles = (props) => StyleSheet.create({
         backgroundColor: props.bg
     },
     containerTodo: {
-        flex: 1,
         justifyContent: 'center',
+        paddingTop: 30,
+        paddingBottom: 10,
+        paddingLeft: 2,
+        paddingRight: 2,
+        backgroundColor: props.bg,
+    },
+    container2do: {
+        justifyContent: 'center',
+        height: "100%",
         paddingTop: 30,
         paddingBottom: 10,
         paddingLeft: 2,
@@ -57,7 +70,7 @@ export const styles = (props) => StyleSheet.create({
     toDoLists3: {
       flex: 1,
       flexDirection: 'column',
-      paddingTop: 40,
+      paddingTop: 0,
       backgroundColor: props.bg,
     },
     inPutBoxTodo: {
@@ -65,6 +78,7 @@ export const styles = (props) => StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       backgroundColor: props.bg,
+        marginBottom: 10,
     },
     inPutBoxTodoText: {
       flex: 1,
@@ -78,4 +92,10 @@ export const styles = (props) => StyleSheet.create({
       backgroundColor: props.bg,
       color: props.color,
     },
+    progressCircleText: {
+        fontSize: 18,
+        color: "#1d1d1d",
+        textAlign: "center",
+        fontWeight: 'bold',
+    }
 });
