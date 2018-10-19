@@ -12,6 +12,11 @@ export const styles = (props) => StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    scrollViewStyle: {
+        backgroundColor: props.bg,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     text:{
         color: props.color,
     },
@@ -35,8 +40,16 @@ export const styles = (props) => StyleSheet.create({
         backgroundColor: props.bg
     },
     containerTodo: {
-        flex: 1,
         justifyContent: 'center',
+        paddingTop: 30,
+        paddingBottom: 10,
+        paddingLeft: 2,
+        paddingRight: 2,
+        backgroundColor: props.bg,
+    },
+    container2do: {
+        justifyContent: 'center',
+        height: "100%",
         paddingTop: 30,
         paddingBottom: 10,
         paddingLeft: 2,
@@ -57,7 +70,7 @@ export const styles = (props) => StyleSheet.create({
     toDoLists3: {
       flex: 1,
       flexDirection: 'column',
-      paddingTop: 40,
+      paddingTop: 0,
       backgroundColor: props.bg,
     },
     inPutBoxTodo: {
@@ -65,6 +78,7 @@ export const styles = (props) => StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       backgroundColor: props.bg,
+        marginBottom: 10,
     },
     inPutBoxTodoText: {
       flex: 1,
@@ -80,7 +94,8 @@ export const styles = (props) => StyleSheet.create({
     },
     progressCircleText: {
         fontSize: 18,
-        color: "white",
+        color: "#1d1d1d",
         textAlign: "center",
+        fontWeight: 'bold',
     }
 });

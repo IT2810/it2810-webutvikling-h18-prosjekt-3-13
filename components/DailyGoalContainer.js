@@ -73,7 +73,7 @@ class DailyGoalContainer extends Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <View style={{ flex: 1, marginBottom: 25}}>{this.getPlaceholderGoal()}</View>
+        <View style={{ flex: 2}}>{this.getPlaceholderGoal()}</View>
         <View style={{ flex: 8 }}>
           <DailyGoalForm
             onNewGoal={this.addNewGoal}

@@ -77,37 +77,26 @@ export default class PedometerSensor extends React.Component {
     );
   };
 
-  getProgressPercent(direction){
+  getProgressPercent(){
     const progressPercent = this.state.pastStepCount/this.state.stepGoal;
-    if(direction == "left"){
-      if(progressPercent > 0.5){
-        return Math.floor(progressPercent*100);
-      }
-      else return 0;
-    }
-    if(direction == "right"){
-      if(1 - progressPercent > 0.5){
-        return Math.floor(progressPercent*100);
-      }
-      else return 0;
-    }
+    return Math.floor(progressPercent*100);
   }
 
   getProgressColor(){
     if(this.state.pastStepCount/this.state.stepGoal >= 1){
-      return "#49e800";
+      return "skyblue";
     }
     else if(this.state.pastStepCount/this.state.stepGoal >= 0.9){
-      return "#a5ff00";
+      return "#b819fc";
     }
     else if(this.state.pastStepCount/this.state.stepGoal >= 0.5){
-      return "yellow";
+      return "#d3f2ff";
     }
     else if(this.state.pastStepCount/this.state.stepGoal >= 0.33){
-      return "orange";
+      return "#e8f8ff";
     }
     else{
-      return "#a30000";
+      return "#ffffff";
     }
   }
 
@@ -123,17 +112,16 @@ export default class PedometerSensor extends React.Component {
     const rightText = this.getProgressPercent("right");
     return (
       <View style={{alignItems: "center"}}>
-          <View style={{marginTop: 30}}/>
-          <ProgressCircle radius={110} percent={this.getProgressPercent("left")} borderWidth={10} color={"lightblue"} bgColor={this.getProgressColor()}><Text style={styles(this.props.screenProps).progressCircleText}>{"step count: " + this.state.currentStepCount.toString() + "\nCurrent goal: " + this.state.stepGoal}</Text></ProgressCircle>
+          <View style={{marginTop: 25}}/>
+          <ProgressCircle radius={110} percent={this.getProgressPercent()} borderWidth={10} color={"orange"} bgColor={this.getProgressColor()}><Text style={styles(this.props.screenProps).progressCircleText}>{"step count: " + this.state.pastStepCount.toString() + "\nCurrent goal: " + this.state.stepGoal}</Text></ProgressCircle>
         <Text style={styles(this.props.screenProps).text}>
           {textStyle}
         </Text>
-
           <Input
               placeholderTextColor={this.props.screenProps.color}
               placeholder={"New step goal"}
               inputContainerStyle={{
-                  width: "70%",
+                  width: "60%",
                   margin: 10,
                   alignSelf: "stretch",
               }}
@@ -149,8 +137,8 @@ export default class PedometerSensor extends React.Component {
 
 
         <Button
-          title="Set as your goal"
-          buttonStyle={{ backgroundColor: "orange", width: 300, marginBottom: 30 }}
+          title="Set goal"
+          buttonStyle={{ backgroundColor: "orange", marginBottom: 20}} //MarginBottom her
           onPress={this.updateStepGoal}
         />
       </View>

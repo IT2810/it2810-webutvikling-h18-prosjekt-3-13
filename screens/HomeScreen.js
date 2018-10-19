@@ -5,8 +5,9 @@ import DailyGoalContainer from "../components/DailyGoalContainer";
 import saveData from "../utils/localstorage";
 import { loadData } from "../utils/localstorage";
 import PedometerSensor from "../components/Pedometer.js";
+import { Icon } from 'react-native-elements';
 
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button, ScrollView } from "react-native";
 import { styles } from "./styles.js";
 
 export default class HomeScreen extends Component {
@@ -15,22 +16,26 @@ export default class HomeScreen extends Component {
   }
 
   static navigationOptions = {
-    title: "Home"
+    title: "Home",
+      tabBarIcon: (() => <Icon
+          size={26}
+          type="material-community"
+          name='home'
+          color='#00aced'
+      />)
   };
 
   render() {
     const { navigation, screenProps } = this.props;
     return (
       <View style={styles(this.props.screenProps).container}>
-        <View style={styles(this.props.screenProps).topBox}></View>
-        <View
-          style={[
-            styles(this.props.screenProps).container,
-          ]}
+        <View style={styles(this.props.screenProps).topBox}/>
+        <ScrollView
+            contentContainerStyle={styles(this.props.screenProps).scrollViewStyle}
         >
             <PedometerSensor screenProps={this.props.screenProps}/>
           <DailyGoalContainer screenProps={this.props.screenProps}/>
-        </View>
+        </ScrollView>
       </View>
     );
   }
