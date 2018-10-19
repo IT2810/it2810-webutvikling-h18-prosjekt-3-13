@@ -100,7 +100,7 @@ Ellers har vi kontinuerlig gjennom utviklingen av appen testet builden på både
 Hvis du ønsker å prøve å appen gjennom expo på mobil må du sørge for å bruke QR-kode scanneren på android-telefonen din når du laster inn appen, hvis ikke vil ikke alltid async loading av steps fra telefonen sine helse-data fungere ordentlig. 
 
 ### Kjøre appen på iOS
-For å kjøre på iPhone må du sende mail eller sms til deg selv fra nettleseren, og deretter åpne på mobil, ettersom expo og iOS ikke lengre lar deg bruke QR scanner. 
+For å kjøre på iPhone kan du bruke kamera applikasjonen (som er i iOS fra før av) til å scanne QR-koden, den telefonen din skal da la deg åpne expo, og kjøre appen. Hvis ikke: send en mail/sms til deg selv gjennom nettleseren din og metro bundler. Åpne deretter mailen/sms på mobilen din, og åpne appen i expo gjennom linken i mail/sms.
 
 ### Kjøre appen på emulator
 Du kan også kjøre på emulator på datamaskinen, men da vil det ikke være noe tilgjengelig data for skrittelleren, og du vil derfor ikke få full funksjonalitet i appen.
