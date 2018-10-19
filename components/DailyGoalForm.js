@@ -32,10 +32,9 @@ class DailyGoalForm extends Component {
           alignItems: "center"
         }}
       >
-        <View style={{ width: 300, margin: 20}}>
+        <View style={{ width: 300, margin: 20 }}>
           <Input
             placeholderTextColor={this.props.screenProps.color}
-
             ref={input => {
               this.mainInput = input;
             }}
@@ -43,8 +42,8 @@ class DailyGoalForm extends Component {
             inputContainerStyle={{
               width: "70%",
               margin: 10,
-                marginLeft: 50,
-              alignSelf: "stretch",
+              marginLeft: 50,
+              alignSelf: "stretch"
             }}
             inputStyle={{
               color: this.props.screenProps.color
@@ -61,18 +60,22 @@ class DailyGoalForm extends Component {
             alignItems: "stretch"
           }}
         >
-            <View style={{flex: 1, flexDirection: "row"}}>
-              <Button
-                title="New goal"
-                buttonStyle={{ backgroundColor: "orange", width: 120}}
-                onPress={this.addDailyGoal}
-              />
-              <Button
-                title="Remove goal"
-                buttonStyle={{ backgroundColor: "skyblue", marginBottom: 30, width: 120 }}
-                onPress={this.clearGoals}
-              />
-            </View>
+          <View style={{ flex: 1, flexDirection: "row" }}>
+            <Button
+              title="New goal"
+              buttonStyle={{ backgroundColor: "orange", width: 120 }}
+              onPress={this.addDailyGoal}
+            />
+            <Button
+              title="Remove goal"
+              buttonStyle={{
+                backgroundColor: "skyblue",
+                marginBottom: 30,
+                width: 120
+              }}
+              onPress={this.clearGoals}
+            />
+          </View>
         </View>
       </View>
     );

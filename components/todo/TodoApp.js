@@ -1,10 +1,10 @@
-import React from 'react';
-import { Text, View } from 'react-native';
-import { List } from 'react-native-elements';
+import React from "react";
+import { Text, View } from "react-native";
+import { List } from "react-native-elements";
 
-import TodoModel from './TodoModel';
-import PartList from './PartList';
-import InputBox from './InputBox';
+import TodoModel from "./TodoModel";
+import PartList from "./PartList";
+import InputBox from "./InputBox";
 
 import { styles } from '../../screens/styles.js';
 import {loadData} from "../../utils/localstorage";
@@ -13,8 +13,17 @@ import saveData from "../../utils/localstorage";
 class TodoApp extends React.Component {
     constructor(props) {
         super(props);
+
+        let initList = [];
+
+        if (this.props.test) {
+            for (i = 0; i < 4; i++) {
+                initList.push(new TodoModel("Heihei", false));
+            }
+        }
+
         this.state = {
-            dataList: []
+            dataList: initList
         }
     }
 
@@ -110,7 +119,7 @@ class TodoApp extends React.Component {
                 {renderLists()}
             </View>
         );
-    }
-}
+      }
+    };
 
 module.exports = TodoApp;

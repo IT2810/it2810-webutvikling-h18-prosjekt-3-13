@@ -1,14 +1,14 @@
 import React from "react";
 import { createBottomTabNavigator } from "react-navigation";
-import { StyleSheet, Text, View } from "react-native";
 
 import { HomeScreen, SettingsScreen, TodoScreen } from "./screens/";
 import { loadData } from "./utils/localstorage.js";
-import styles from "./screens/styles.js";
 
 
 // The app itself returns the RootStack which is what is rendered to the screen
 // See RootStack further down.
+
+let defaultRouteName = "Home";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -78,7 +78,7 @@ export const RootStack = createBottomTabNavigator(
     Settings: { screen: SettingsScreen }
   },
   {
-    initialRouteName: "Home", // Defines starting screen (initial route)
+    initialRouteName: defaultRouteName, // Defines starting screen (initial route)
     tabBarOptions: {
       // Styling for the BottomTabNavigator
       style: {backgroundColor: "#3d3d3d",
@@ -86,5 +86,5 @@ export const RootStack = createBottomTabNavigator(
               paddingTop: 10,
               height: "10%"}
     }
-  },
+  }
 );

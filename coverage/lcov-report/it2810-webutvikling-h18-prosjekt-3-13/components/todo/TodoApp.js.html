@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for it2810-webutvikling-h18-prosjekt-3-13/components/todo/TodoApp.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">it2810-webutvikling-h18-prosjekt-3-13/components/todo</a> TodoApp.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">45.71% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>16/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.86% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.75% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+import { Text, View } from "react-native";
+import { List } from "react-native-elements";
+&nbsp;
+import TodoModel from "./TodoModel";
+import PartList from "./PartList";
+import InputBox from "./InputBox";
+&nbsp;
+import { styles } from '../../screens/styles.js';
+import {loadData} from "../../utils/localstorage";
+import saveData from "../../utils/localstorage";
+&nbsp;
+class TodoApp extends React.Component {
+    constructor(props) {
+        super(props);
+&nbsp;
+        let initList = [];
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (this.props.test) {
+            for (i = 0; i &lt; 4; i++) {
+                initList.push(new TodoModel("Heihei", false));
+            }
+        }
+&nbsp;
+        this.state = {
+            dataList: initList
+        }
+    }
+&nbsp;
+    componentDidMount() { // Loads result from Async into state i.e. previous saved tasks
+        loadData("TodoAppState").then(<span class="fstat-no" title="function not covered" >re</span>sult =&gt; <span class="cstat-no" title="statement not covered" >this.setState(result))</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    co</span>mponentDidUpdate() { // Save current tasks to Async
+<span class="cstat-no" title="statement not covered" >        saveData("TodoAppState", this.state);</span>
+    }
+&nbsp;
+    addTodoItem = <span class="fstat-no" title="function not covered" >(t</span>ask) =&gt; { // Takes in a task, adds to list, updates state
+        const midList = <span class="cstat-no" title="statement not covered" >this.state.dataList.slice();</span>
+<span class="cstat-no" title="statement not covered" >        midList.push(new TodoModel(task, false));</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            dataList: midList
+        })
+    };
+&nbsp;
+    removeTodoItem = <span class="fstat-no" title="function not covered" >(t</span>ask) =&gt; { // Takes in a task, removes from list, updates state
+        const midList = <span class="cstat-no" title="statement not covered" >this.state.dataList.slice()</span>
+        const taskIndex = <span class="cstat-no" title="statement not covered" >midList.indexOf(task);</span>
+<span class="cstat-no" title="statement not covered" >        midList.splice(taskIndex, 1);</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            dataList: midList
+        })
+    };
+&nbsp;
+    changeCompleted = <span class="fstat-no" title="function not covered" >(t</span>ask) =&gt; { // Takes in a task, flips completed-prop, updates state
+        const midList = <span class="cstat-no" title="statement not covered" >this.state.dataList.slice();</span>
+        const taskIndex = <span class="cstat-no" title="statement not covered" >midList.indexOf(task);</span>
+        let midTask = <span class="cstat-no" title="statement not covered" >task;</span>
+<span class="cstat-no" title="statement not covered" >        midTask.completed = !midTask.completed;</span>
+<span class="cstat-no" title="statement not covered" >        midList.splice(taskIndex, 1, midTask);</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            dataList: midList
+        });
+    };
+&nbsp;
+    handleDelete = <span class="fstat-no" title="function not covered" >(t</span>ask) =&gt; { // Fires on pressing delete-button in ListObject
+<span class="cstat-no" title="statement not covered" >        this.removeTodoItem(task);</span>
+    };
+&nbsp;
+    handleChange = <span class="fstat-no" title="function not covered" >(t</span>ask) =&gt; { // Fires on pressing complete-button in ListObject
+<span class="cstat-no" title="statement not covered" >        this.changeCompleted(task);</span>
+    };
+&nbsp;
+    handleAdd = <span class="fstat-no" title="function not covered" >(t</span>ask) =&gt; { // Fires on pressing add-button or pressing Enter in InputBox
+<span class="cstat-no" title="statement not covered" >        this.addTodoItem(task);</span>
+    };
+&nbsp;
+    render() {
+        const completed = this.state.dataList.filter(task =&gt; task.completed); // Creates two lists, one containing completed tasks and one not-completed
+        const notCompleted = this.state.dataList.filter(task =&gt; !task.completed);
+&nbsp;
+        renderLists = () =&gt; { // Help function for rendering tasks. If no tasks in dataList, a placeholder text is rendered instead
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (this.state.dataList.length) {
+                return (
+                    &lt;View
+                        style={styles(this.props.screenProps).toDoLists1}&gt;
+                        &lt;PartList screenProps={this.props.screenProps} list={notCompleted} handleDelete={this.handleDelete}
+                                  handleChange={this.handleChange}/&gt;
+                        &lt;View // Divider line between completed and not-completed tasks
+                            style={(completed.length &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >notCompleted.length)</span> ? <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+                                borderBottomColor: this.props.screenProps.bgSec,
+                                borderBottomWidth: 2, marginTop: 20, marginBottom: 20, marginLeft: 150, marginRight: 150} : {}
+                            }
+                        /&gt;
+                        &lt;PartList screenProps={this.props.screenProps} list={completed} handleDelete={this.handleDelete} handleChange={this.handleChange}/&gt;
+                    &lt;/View&gt;
+                )
+            } else {
+<span class="cstat-no" title="statement not covered" >                return(</span>
+                    &lt;View
+                        style={styles(this.props.screenProps).toDoLists2}&gt;
+                        &lt;Text // Contains placeholder text
+                            style={{fontSize: 50, color: 'lightgrey', textAlign: "center"}}&gt;
+                            All todo's completed
+                        &lt;/Text&gt;
+                    &lt;/View&gt;
+                )
+            }
+        }
+        return (
+            &lt;View
+                style={styles(this.props.screenProps).toDoLists3}&gt;
+                &lt;InputBox screenProps = {this.props.screenProps}
+                    style={{
+                    flex: 1,
+                    marginBottom: 20,
+                }}
+                    onAdd={this.handleAdd}/&gt;
+                {renderLists()}
+            &lt;/View&gt;
+        );
+      }
+    };
+&nbsp;
+module.exports = TodoApp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 19 2018 16:54:00 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

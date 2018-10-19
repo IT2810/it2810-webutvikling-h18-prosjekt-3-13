@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for it2810-webutvikling-h18-prosjekt-3-13/components/Pedometer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">it2810-webutvikling-h18-prosjekt-3-13/components</a> Pedometer.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>19/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">51.35% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>19/37</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Expo from "expo";
+import React from "react";
+import { Pedometer } from "expo";
+import { Button, Input } from "react-native-elements";
+import { Text, View } from "react-native";
+import ProgressCircle from "react-native-progress-circle";
+import saveData from "../utils/localstorage.js";
+import { loadData } from "../utils/localstorage.js";
+import { styles } from "../screens/styles.js";
+&nbsp;
+// Uses Google Fit on Android, and Core Motion on iOS to get users stepcount
+&nbsp;
+// PedometerSensor class (component)
+export default class PedometerSensor extends React.Component {
+  // State to keep track of steps, goal.
+  state = {
+    isPedometerAvailable: "checking",
+    pastStepCount: 0,
+    currentStepCount: 0,
+    inputText: "",
+    stepGoal: 10000
+  };
+&nbsp;
+  // When mounting loads from AsyncStorage the value saved as StepGoal
+  // This will be whatever the user last set as a stepGoal in the app.
+  componentDidMount() {
+    loadData("stepGoal").then(<span class="fstat-no" title="function not covered" >re</span>sult =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ stepGoal: result }))</span>;
+    this._subscribe();
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillUnmount() {
+<span class="cstat-no" title="statement not covered" >    this._unsubscribe();</span>
+  }
+&nbsp;
+  // Function to set a new stepGoal. Will also save it in AsyncStorage
+  updateStepGoal = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    // Only change goal if it is a number greater than 0 and does not contain '.'
+<span class="cstat-no" title="statement not covered" >    if (</span>
+      !isNaN(this.state.inputText) &amp;&amp;
+      this.state.inputText &gt; 0 &amp;&amp;
+      !(this.state.inputText.indexOf(".") &gt; -1)
+    ) {
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+        stepGoal: this.state.inputText
+      });
+      // Saves the new stepGoal from the inputText component (react-native-elements) in the AsyncStorage with key "stepGoal"
+<span class="cstat-no" title="statement not covered" >      saveData("stepGoal", this.state.inputText);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
+      inputText: ""
+    });
+  };
+&nbsp;
+  // Listens for changes in stepcount
+  _subscribe = () =&gt; {
+    this._subscription = Pedometer.watchStepCount(<span class="fstat-no" title="function not covered" >re</span>sult =&gt; {
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+        currentStepCount: result.steps
+      });
+    });
+&nbsp;
+    Pedometer.isAvailableAsync().then(
+<span class="fstat-no" title="function not covered" >      re</span>sult =&gt; {
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+          isPedometerAvailable: String(result)
+        });
+      },
+<span class="fstat-no" title="function not covered" >      er</span>ror =&gt; {
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+          isPedometerAvailable: "Could not get isPedometerAvailable: " + error
+        });
+      }
+    );
+&nbsp;
+    // Finds the amount of steps walked in the past 24 hours.
+    const end = new Date();
+    const start = new Date();
+    start.setDate(end.getDate() - 1);
+    Pedometer.getStepCountAsync(start, end).then(
+<span class="fstat-no" title="function not covered" >      re</span>sult =&gt; {
+<span class="cstat-no" title="statement not covered" >        this.setState({ pastStepCount: result.steps });</span>
+      },
+<span class="fstat-no" title="function not covered" >      er</span>ror =&gt; {
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+          pastStepCount: "Could not get stepCount: " + error
+        });
+      }
+    );
+  };
+&nbsp;
+  // Function to find how many percent of the stepGoal is reached.
+  getProgressPercent() {
+    const progressPercent = this.state.pastStepCount / this.state.stepGoal;
+    return Math.floor(progressPercent * 100);
+  }
+&nbsp;
+  // Function that returns a colorvalue depending on the current percent reached of the stepgoal.
+  getProgressColor() {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.state.pastStepCount / this.state.stepGoal &gt;= 1) {
+<span class="cstat-no" title="statement not covered" >      return "skyblue";</span>
+    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (this.state.pastStepCount / this.state.stepGoal &gt;= 0.9) {
+<span class="cstat-no" title="statement not covered" >      return "#b819fc";</span>
+    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (this.state.pastStepCount / this.state.stepGoal &gt;= 0.5) {
+<span class="cstat-no" title="statement not covered" >      return "#d3f2ff";</span>
+    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (this.state.pastStepCount / this.state.stepGoal &gt;= 0.33) {
+<span class="cstat-no" title="statement not covered" >      return "#e8f8ff";</span>
+    } else {
+      return "#ffffff";
+    }
+  }
+&nbsp;
+  // No longer listens for steps
+  _unsubscribe = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    this._subscription &amp;&amp; this._subscription.remove();</span>
+<span class="cstat-no" title="statement not covered" >    this._subscription = null;</span>
+  };
+&nbsp;
+  // Render function, returns the inputField, the progressCircle, stepcount and button.
+  render() {
+    const { textStyle } = this.props;
+    const progressColor = this.getProgressColor();
+&nbsp;
+    return (
+      &lt;View style={{ alignItems: "center" }}&gt;
+        &lt;View style={{ marginTop: 25 }} /&gt;
+        &lt;ProgressCircle
+          radius={110}
+          percent={this.getProgressPercent()}
+          borderWidth={10}
+          color={"orange"}
+          bgColor={this.getProgressColor()}
+        &gt;
+          &lt;Text style={styles(this.props.screenProps).progressCircleText}&gt;
+            {"step count: " +
+              this.state.pastStepCount.toString() +
+              "\nCurrent goal: " +
+              this.state.stepGoal}
+          &lt;/Text&gt;
+        &lt;/ProgressCircle&gt;
+        &lt;Text style={styles(this.props.screenProps).text}&gt;{textStyle}&lt;/Text&gt;
+        &lt;Input
+          placeholderTextColor={this.props.screenProps.color}
+          placeholder={"New step goal"}
+          inputContainerStyle={{
+            width: "60%",
+            margin: 10,
+            alignSelf: "stretch"
+          }}
+          inputStyle={{
+            color: this.props.screenProps.color
+          }}
+          onChangeText={<span class="fstat-no" title="function not covered" >te</span>xt =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ text })}</span>
+          onChangeText={<span class="fstat-no" title="function not covered" >te</span>xt =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ inputText: text })}</span>
+          value={this.state.inputText}
+        /&gt;
+&nbsp;
+        &lt;Button
+          title="Set goal"
+          buttonStyle={{ backgroundColor: "orange", marginBottom: 20 }} //MarginBottom her
+          onPress={this.updateStepGoal}
+        /&gt;
+      &lt;/View&gt;
+    );
+  }
+}
+&nbsp;
+Expo.registerRootComponent(PedometerSensor);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 19 2018 16:54:00 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
